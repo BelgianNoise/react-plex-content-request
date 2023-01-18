@@ -1,0 +1,16 @@
+.appRoot {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  height: 100%;
+  max-height: 100%;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.appRootMain {
+  flex: 1;
+  overflow-y: scroll;
+  background-color: var(--colors-background-normal);
+}

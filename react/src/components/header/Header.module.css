@@ -1,0 +1,35 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: calc(var(--gap-normal) + var(--gap-tiny));
+  background-color: var(--colors-background-darker);
+}
+
+.logoContainer {
+  height: var(--gap-large);
+  overflow: visible;
+}
+
+.plexLogoLetters {
+  height: calc(var(--gap-large) + 5px);
+}
+
+.logoTextContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.nasaj {
+  line-height: var(--gap-large);
+  font-size: var(--gap-large);
+  font-weight: bold;
+  font-family: var(--font-family-plex-circular);
+  padding: 0 var(--gap-small) 0 var(--gap-normal);
+}
+
+.contentRequest {
+  font-size: var(--font-size-large);
+}
