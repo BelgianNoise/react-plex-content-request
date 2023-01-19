@@ -1,12 +1,12 @@
 
 import { useAppDispatch } from '../../app/hooks';
-import styles from './Add.module.css';
+import styles from './Submit.module.css';
 
-export function Add() {
+export function Submit() {
   const dispatch = useAppDispatch();
 
 
   return (
-    <div> ADD </div>
+    <div> Submit Request </div>
   );
 }

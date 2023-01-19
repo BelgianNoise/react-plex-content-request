@@ -3,6 +3,97 @@
   flex: 1;
   margin: var(--gap-small);
   margin-top: var(--gap-tiny);
-  height: calc(100% - var(--gap-small) - var(--gap-tiny));
+  padding: var(--gap-tiny) 0 var(--gap-small);
+  height: calc(100% - var(--gap-small) - var(--gap-tiny) - var(--gap-small));
+  border-radius: var(--gap-tiny);
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.routesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-tiny);
+}
+
+a .navItem {
+  width: 100%;
+  font-size: var(--font-size-header-small);
+  fill: var(--colors-foreground-normal);
+
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap-normal);
+  align-items: center;
+  justify-content: start;
+}
+
+a[aria-current="page"] .navItem {
+  color: var(--colors-plex-primary);
+  border-color: var(--colors-plex-primary);
+}
+
+a .navItem .borderLeft {
+  height: calc(28px + 2 * var(--gap-small));
+  width: 2px;
+  background-color: transparent;
+  border-radius: 2px;
+}
+
+a[aria-current="page"] .navItem .borderLeft {
+  background-color: var(--colors-plex-primary);
+}
+
+a .navItem svg {
+  fill: var(--colors-foreground-normal);
+  height: 28px;
+}
+
+a[aria-current="page"] .navItem svg {
+  fill: var(--colors-plex-primary);
+}
+
+a:hover .navItem {
+  color: var(--colors-white);
+}
+
+a:hover .navItem svg {
+  fill: var(--colors-white);
+}
+
+a:hover .navItem .borderLeft {
+  background-color: var(--colors-white);
+}
+
+a * {
+  transition: all 0.05s ease;
+}
+
+.goToPlex {
+  display: flex;
+  gap: var(--gap-small);
+  justify-content: center;
+  background-color: var(--colors-background-darker);
+  padding: 12px 20px;
+
+  font-size: var(--font-size-header-small);
+  line-height: var(--font-size-header-small);
+
   border-radius: var(--gap-small);
+  margin: 0 var(--gap-normal);
+}
+
+.goToPlex:hover {
+  background-color: var(--colors-background-normal);
+}
+
+.goToPlex .plexLink {
+  text-decoration: underline;
+}
+
+.goToPlex img {
+  height: var(--font-size-header-large);
 }

@@ -10,7 +10,9 @@
   --colors-background-darker: #0C0C0C;
   --colors-background-dark: #191919;
   --colors-background-normal: #212121;
-  --colors-foreground-normal: #f1f1f1;
+  --colors-foreground-normal: #eee;
+  --colors-foreground-light: #FFFFFFBF;
+  --colors-white: #ffffff;
 
   --font-size-tiny: 10px;
   --font-size-small: 12px;
@@ -56,4 +58,9 @@ html, body, #root {
 
 span {
   display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: var(--colors-foreground-normal);
 }
