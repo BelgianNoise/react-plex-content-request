@@ -84,10 +84,11 @@ a * {
 
   border-radius: var(--gap-small);
   margin: 0 var(--gap-normal);
+  transition: scale 0.2s ease;
 }
 
 .goToPlex:hover {
-  background-color: var(--colors-background-normal);
+  scale: 1.08;
 }
 
 .goToPlex .plexLink {
