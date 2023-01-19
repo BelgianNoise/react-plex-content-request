@@ -1,0 +1,8 @@
+.root {
+  background-color: var(--colors-background-dark);
+  flex: 1;
+  margin: var(--gap-small);
+  margin-top: var(--gap-tiny);
+  height: calc(100% - var(--gap-small) - var(--gap-tiny));
+  border-radius: var(--gap-small);
+}

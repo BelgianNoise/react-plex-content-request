@@ -7,10 +7,23 @@
   width: 100%;
   max-width: 100%;
   overflow: hidden;
+  background-color: var(--colors-background-normal);
 }
 
 .appRootMain {
   flex: 1;
   overflow-y: scroll;
-  background-color: var(--colors-background-normal);
+
+  display: flex;
+  flex-direction: row;
+  gap: 0;
 }
+
+.nav {
+  width: 300px;
+}
+
+.content {
+  flex: 1;
+}
+

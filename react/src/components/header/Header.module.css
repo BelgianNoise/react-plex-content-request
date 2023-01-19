@@ -5,6 +5,8 @@
   align-items: center;
   padding: calc(var(--gap-normal) + var(--gap-tiny));
   background-color: var(--colors-background-darker);
+  margin: var(--gap-tiny);
+  border-radius: var(--gap-small);
 }
 
 .logoContainer {
