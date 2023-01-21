@@ -1,0 +1,14 @@
+{
+  "translation-loaded": "language changed to NL",
+  "test": "test NL",
+
+  "components": {
+    "nav": {
+      "home": "Home",
+      "overview": "Overzicht",
+      "my-requests": "Mijn Aanvragen",
+      "submit-request": "Aanvraag indienen",
+      "go-to-plex": "Ga naar Plex"
+    }
+  }
+}

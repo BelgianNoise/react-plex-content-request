@@ -4,8 +4,12 @@ import styles from './Nav.module.css';
 import { ReactComponent as HomeSVG } from '../../assets/home.svg';
 import { ReactComponent as OverviewSVG } from '../../assets/overview.svg';
 import plexArrow from '../../assets/plex-arrow.png';
+import { useTranslation } from 'react-i18next';
 
 export function Nav() {
+
+  const { t } = useTranslation();
+
   return (
     <div className={styles.root}>
 
@@ -18,7 +22,7 @@ export function Nav() {
           <div className={styles.navItem}>
             <div className={styles.borderLeft}></div>
             <HomeSVG />
-            <p>Home</p>
+            <p>{t('components.nav.home')}</p>
           </div>
         </NavLink>
 
@@ -29,7 +33,7 @@ export function Nav() {
           <div className={styles.navItem}>
             <div className={styles.borderLeft}></div>
             <OverviewSVG />
-            <p>Overview</p>
+            <p>{t('components.nav.overview')}</p>
           </div>
         </NavLink>
 
@@ -40,7 +44,7 @@ export function Nav() {
           <div className={styles.navItem}>
             <div className={styles.borderLeft}></div>
             <HomeSVG />
-            <p>My Requests</p>
+            <p>{t('components.nav.my-requests')}</p>
           </div>
         </NavLink>
 
@@ -51,14 +55,14 @@ export function Nav() {
           <div className={styles.navItem}>
             <div className={styles.borderLeft}></div>
             <HomeSVG />
-            <p>Submit Request</p>
+            <p>{t('components.nav.submit-request')}</p>
           </div>
         </NavLink>
 
       </div>
 
       <a href="https://app.plex.tv/" className={styles.goToPlex}>
-        <p>Go to app.plex.tv</p>
+        <p>{t('components.nav.go-to-plex')}</p>
         <img src={plexArrow} alt="plex-arrow"/>
       </a>
 

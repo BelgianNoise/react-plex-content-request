@@ -1,0 +1,42 @@
+.root {
+  position: relative;
+  font-size: var(--font-size-header-small);
+}
+
+.langOption {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap-small);
+  align-items: center;
+  padding: var(--gap-tiny) 0;
+  cursor: default;
+}
+
+.root img {
+  width: 22px;
+  height: 16px;
+  border-radius: 3px;
+}
+
+.popup {
+  z-index: 2;
+  position: absolute;
+  left: calc(-1 * var(--gap-normal));
+  top: 100%;
+  display: none;
+  background-color: var(--colors-background-dark);
+  border: 2px solid var(--colors-background-dark);
+}
+
+.root:hover .popup {
+  display: block;
+}
+
+.popup .langOption {
+  padding: var(--gap-small) var(--gap-normal);
+  cursor: pointer;
+}
+
+.popup .langOption:hover {
+  background-color: var(--colors-background-normal);
+}

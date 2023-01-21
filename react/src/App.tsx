@@ -1,9 +1,8 @@
-import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import styles from './App.module.css';
 import { Header } from './components/header/Header';
 import { Nav } from './components/nav/Nav';
-import { PageNotFound } from './components/PageNotFound/PageNotFound';
+import { PageNotFound } from './components/page-not-found/PageNotFound';
 import { Submit } from './features/submit/Submit';
 import { Auth } from './features/auth/Auth';
 import { Home } from './features/home/Home';

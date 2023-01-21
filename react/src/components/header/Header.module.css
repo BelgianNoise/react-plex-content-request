@@ -18,7 +18,7 @@
   height: calc(var(--gap-large) + 5px);
 }
 
-.logoTextContainer {
+.sectionLeft {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -34,4 +34,11 @@
 
 .contentRequest {
   font-size: var(--font-size-large);
+}
+
+.sectionRight {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap-large);
+  align-items: center;
 }

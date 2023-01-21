@@ -1,0 +1,14 @@
+{
+  "translation-loaded": "language changed to EN",
+  "test": "test EN",
+
+  "components": {
+    "nav": {
+      "home": "Home",
+      "overview": "Overview",
+      "my-requests": "My Requests",
+      "submit-request": "Submit Request",
+      "go-to-plex": "Go to Plex"
+    }
+  }
+}

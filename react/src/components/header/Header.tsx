@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
 import { useAppSelector, useAppDispatch } from '../../app/hooks';
 import { login, logout } from '../../features/auth/authThunks';
 import styles from './Header.module.css';
 import plexLogoLettersWhite from '../../assets/plex-logo-letters-white.png';
+import { LanguageSelector } from '../language-selector/LanguageSelector';
 
 export function Header() {
   const isLoggedIn = useAppSelector((state) => state.auth.isLoggedIn);
   const dispatch = useAppDispatch();
-  const [incrementAmount, setIncrementAmount] = useState('2');
 
   const handleAuthButtonClick = () => {
     if (isLoggedIn) {
@@ -20,7 +19,7 @@ export function Header() {
   return (
     <div className={styles.root}>
 
-      <div className={styles.logoTextContainer}>
+      <div className={styles.sectionLeft}>
 
         <div className={styles.logoContainer}>
 
@@ -33,10 +32,14 @@ export function Header() {
 
       </div>
 
-      <div>
+      <div className={styles.sectionRight}>
+
+        <LanguageSelector />
+
         <button onClick={() => handleAuthButtonClick()}>
           {isLoggedIn ? 'Logout' : 'Login'}
         </button>
+
       </div>
 
     </div>
