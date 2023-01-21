@@ -4,16 +4,26 @@ import { ReactComponent as PlusSVG } from '../../assets/plus.svg';
 import { ReactComponent as InfoSVG } from '../../assets/info.svg';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { hideAuthWindow } from './authSlice';
-import { Login } from './components/login/Login';
-import { Register } from './components/register/Register';
-import { ResetPassword } from './components/reset-password/ResetPassowrd';
+import { Login, LoginRef } from './components/login/Login';
+import { Register, RegisterRef } from './components/register/Register';
+import { ResetPassword, ResetPasswordRef } from './components/reset-password/ResetPassword';
 import { AuthWindowStatus } from '../../models/auth-window-status';
+import { useRef } from 'react';
 
 export function Auth() {
 
   const { t } = useTranslation();
   const dispatch = useAppDispatch();
   const authWindowStatus = useAppSelector((state) => state.auth.status);
+
+  const loginRef = useRef<LoginRef>(null);
+  const registerRef = useRef<RegisterRef>(null);
+  const resetPasswordRef = useRef<ResetPasswordRef>(null);
+  const handleButtonPress = () => {
+    loginRef.current?.submit();
+    registerRef.current?.submit();
+    resetPasswordRef.current?.submit();
+  };
 
   return (
     <div className={styles.root}>
@@ -26,10 +36,10 @@ export function Auth() {
       <div className={styles.content}>
         {(() => {
           switch (authWindowStatus) {
-            case AuthWindowStatus.SING_IN: return <Login />
-            case AuthWindowStatus.REGISTER: return <Register />
-            case AuthWindowStatus.FORGOT_PASSWORD: return <ResetPassword />
-            default: <Login />
+            case AuthWindowStatus.SING_IN: return <Login ref={loginRef}/>
+            case AuthWindowStatus.REGISTER: return <Register ref={registerRef}/>
+            case AuthWindowStatus.FORGOT_PASSWORD: return <ResetPassword ref={resetPasswordRef}/>
+            default: <div>(╯°□°）╯︵ ┻━┻</div>
           }
         })()}
       </div>
@@ -41,7 +51,7 @@ export function Auth() {
             {t('features.auth.footer.tool-tip')}
           </div>
         </div>
-        <button className='primary'>
+        <button className='primary' onClick={handleButtonPress}>
           {t(`features.auth.footer.${authWindowStatus}`)}
         </button>
       </div>
