@@ -17,7 +17,12 @@ These features should be implemented in every version:
 
 ## Status
 
-  - [**React**](https://reactjs.org/): Framework exploration
+  - [**React**](https://reactjs.org/):
+    - [x] Routing
+    - [x] Global State Management
+    - [x] i18n
+    - [ ] Authentication via Firebase Auth
+    - [ ] CR(U)D operations on a Firebase Firestore (NoSQL document database)
 
 #
   - Frameworks I want to try (in order of interest)
