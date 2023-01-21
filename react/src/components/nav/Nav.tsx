@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom';
 import styles from './Nav.module.css';
 import { ReactComponent as HomeSVG } from '../../assets/home.svg';
 import { ReactComponent as OverviewSVG } from '../../assets/overview.svg';
+import { ReactComponent as SubmitRequestSVG } from '../../assets/submit-request.svg';
+import { ReactComponent as MyRequestsSVG } from '../../assets/my-requests.svg';
 import plexArrow from '../../assets/plex-arrow.png';
 import { useTranslation } from 'react-i18next';
 
@@ -43,7 +45,7 @@ export function Nav() {
         >
           <div className={styles.navItem}>
             <div className={styles.borderLeft}></div>
-            <HomeSVG />
+            <MyRequestsSVG />
             <p>{t('components.nav.my-requests')}</p>
           </div>
         </NavLink>
@@ -54,7 +56,7 @@ export function Nav() {
         >
           <div className={styles.navItem}>
             <div className={styles.borderLeft}></div>
-            <HomeSVG />
+            <SubmitRequestSVG />
             <p>{t('components.nav.submit-request')}</p>
           </div>
         </NavLink>
