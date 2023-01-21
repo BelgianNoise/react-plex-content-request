@@ -8,7 +8,27 @@
       "overview": "Overview",
       "my-requests": "My Requests",
       "submit-request": "Submit Request",
-      "go-to-plex": "Go to Plex"
+      "go-to-plex": "Open Plex"
+    },
+    "header": {
+      "sign-in": "Sign in",
+      "sign-out": "Sign out"
+    }
+  },
+
+  "features": {
+    "auth": {
+      "header": {
+        "sign-in": "Sign in",
+        "register": "Create new account",
+        "forgot-password": "Request password reset"
+      },
+      "footer": {
+        "sign-in": "Sign in",
+        "register": "Register",
+        "forgot-password": "Reset password",
+        "tool-tip": "All authentication is secured and handled by Google's Firebase Authentication service. I am able to see all registered emails but NOT their passwords. Only YOU are able to reset your password."
+      }
     }
   }
 }

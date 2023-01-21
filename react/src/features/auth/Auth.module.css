@@ -1,5 +1,86 @@
 .root {
+  width: 60%;
+  min-width: 400px;
+  max-width: 700px;
+  margin: 15% auto;
+  overflow: scroll;
   background-color: var(--colors-background-normal);
-  height: 100%;
-  width: 100%;
+  border-radius: var(--gap-tiny);
+}
+
+.root {
+  animation-name: slidein;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+}
+
+@keyframes slidein {
+  from { margin-top: -100%; }
+  to { margin-top: 15%; }
+}
+
+.header, .footer, .content {
+  padding: var(--gap-normal) var(--gap-large);
+}
+
+.header, .footer {
+  background-color: var(--colors-background-light);
+  padding: var(--gap-normal) var(--gap-large);
+}
+
+.content {
+  background-color: var(--colors-background-normal);
+}
+
+.header {
+  font-size: var(--font-size-header-normal);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header svg {
+  fill: var(--colors-background-lighter);
+  transform: rotate(45deg);
+  height: 30px;
+  cursor: pointer;
+}
+
+.header svg:hover {
+  fill: var(--colors-white);
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer svg {
+  height: 26px;
+  fill: var(--colors-background-lighter);
+  cursor: help;
+}
+
+.footer .toolTipContainer {
+  position: relative;
+}
+
+.footer .toolTip {
+  position: absolute;
+  left: calc(100% + var(--gap-small));
+  bottom: calc(-1 * var(--gap-small));
+  background-color: var(--colors-background-dark);
+  color: var(--colors-foreground-dark);
+  padding: var(--gap-small);
+  border-radius: var(--gap-tiny);
+  display: none;
+  width: 300px;
+}
+
+.footer .toolTipContainer:hover .toolTip {
+  display: block;
 }

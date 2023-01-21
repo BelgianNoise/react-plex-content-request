@@ -1,18 +1,21 @@
 import { useAppSelector, useAppDispatch } from '../../app/hooks';
-import { login, logout } from '../../features/auth/authThunks';
+import { logout } from '../../features/auth/authThunks';
 import styles from './Header.module.css';
 import plexLogoLettersWhite from '../../assets/plex-logo-letters-white.png';
 import { LanguageSelector } from '../language-selector/LanguageSelector';
+import { useTranslation } from 'react-i18next';
+import { showAuthWindow } from '../../features/auth/authSlice';
 
 export function Header() {
   const isLoggedIn = useAppSelector((state) => state.auth.isLoggedIn);
   const dispatch = useAppDispatch();
+  const { t } = useTranslation();
 
   const handleAuthButtonClick = () => {
     if (isLoggedIn) {
       dispatch(logout());
     } else {
-      dispatch(login());
+      dispatch(showAuthWindow());
     }
   }
 
@@ -36,8 +39,8 @@ export function Header() {
 
         <LanguageSelector />
 
-        <button onClick={() => handleAuthButtonClick()}>
-          {isLoggedIn ? 'Logout' : 'Login'}
+        <button className='primary' onClick={() => handleAuthButtonClick()}>
+          {t(`components.header.${isLoggedIn ? 'sign-out' : 'sign-in'}`)}
         </button>
 
       </div>

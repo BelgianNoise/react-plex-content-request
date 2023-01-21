@@ -9,6 +9,26 @@
       "my-requests": "Mijn Aanvragen",
       "submit-request": "Aanvraag indienen",
       "go-to-plex": "Ga naar Plex"
+    },
+    "header": {
+      "sign-in": "Aanmelden",
+      "sign-out": "Afmelden"
+    }
+  },
+
+  "features": {
+    "auth": {
+      "header": {
+        "sign-in": "Aanmelden",
+        "register": "Nieuwe account aanmaken",
+        "forgot-password": "Wachtwoord vergeten"
+      },
+      "footer": {
+        "sign-in": "Aanmelden",
+        "register": "Account aanmaken",
+        "forgot-password": "Wachtwoord resetten",
+        "tool-tip": "Alle gegevens worden beveiligd en onderhouden door Google's Firebase Authentication service. Ik kan van elke gebruiker het email adres zien maar NIET het wachtwoord. Enkel JIJ kan je wachtwoord aanpassen adhv een email."
+      }
     }
   }
 }
