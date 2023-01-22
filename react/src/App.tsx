@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import styles from './App.module.css';
 import { Header } from './components/header/Header';
 import { Nav } from './components/nav/Nav';
@@ -13,7 +13,7 @@ function App() {
   const showAuthWindow = useAppSelector((state) => state.auth.showAuthWindow);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className={styles.root}>
 
         {showAuthWindow ? (
@@ -42,7 +42,7 @@ function App() {
           </div>
         </div>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
