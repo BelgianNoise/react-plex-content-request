@@ -75,6 +75,7 @@
   bottom: calc(-1 * var(--gap-small));
   background-color: var(--colors-background-dark);
   color: var(--colors-foreground-dark);
+  text-align: justify;
   padding: var(--gap-small);
   border-radius: var(--gap-tiny);
   display: none;
