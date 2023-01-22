@@ -17,7 +17,7 @@ These features should be implemented in every version:
 
 ## Status
 
-  - [**React**](https://reactjs.org/):
+  - [**React**](https://reactjs.org/):     [gh-pages deployment](https://belgiannoise.github.io/web-frameworks/react/build/#/)
     - [x] Routing
     - [x] Global State Management
     - [x] i18n
