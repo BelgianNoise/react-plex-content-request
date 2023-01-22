@@ -18,9 +18,9 @@ These features should be implemented in every version:
 ## Status
 
   - [**React**](https://reactjs.org/):     [gh-pages deployment](https://belgiannoise.github.io/web-frameworks/react/build/#/)
-    - [x] Routing
-    - [x] Global State Management
-    - [x] i18n
+    - [x] Routing (react-router)
+    - [x] Global State Management (Redux)
+    - [x] i18n (react-i18next)
     - [ ] Authentication via Firebase Auth
     - [ ] CR(U)D operations on a Firebase Firestore (NoSQL document database)
 
