@@ -1,6 +1,9 @@
-import { forwardRef, Ref, useImperativeHandle } from 'react';
+import { forwardRef, Ref, useImperativeHandle, useState } from 'react';
 import { useAppDispatch } from '../../../../app/hooks';
-import { goToRegister } from '../../authSlice';
+import { TextInput } from '../../../../components/input/Input';
+import { ReactComponent as EmailSVG } from '../../../../assets/email.svg';
+import { ReactComponent as PasswordSVG } from '../../../../assets/password.svg';
+
 import styles from './Login.module.css';
 
 export interface LoginRef {
@@ -17,10 +20,26 @@ export const Login = forwardRef((props: {}, ref: Ref<LoginRef>) => {
     console.log('=== handling submit bruur LOGIN');
   }
 
+  const [ email, setEmail ] = useState('');
+  const [ password, setPassword ] = useState('');
+
   return (
     <div className={styles.root}>
-      LOGIN 
-      <button className='secondary' onClick={() => dispatch(goToRegister())}>sdffssdsf</button>
+      <TextInput
+        type='email'
+        value={email}
+        setValue={setEmail}
+        label='Email'
+        icon={EmailSVG}
+        autoComplete
+      />
+      <TextInput
+        type='password'
+        value={password}
+        setValue={setPassword}
+        label='Password'
+        icon={PasswordSVG}
+      />
     </div>
   );
 })

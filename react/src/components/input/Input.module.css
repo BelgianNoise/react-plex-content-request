@@ -1,0 +1,63 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-small);
+}
+
+.inputDiv {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: var(--gap-normal);
+  justify-content: start;
+  align-items: center;
+  position: relative;
+  padding: var(--gap-small) var(--gap-normal);
+}
+
+.inputDiv input {
+  flex: 1;
+  color: var(--colors-foreground-normal);
+  background-color: transparent;
+}
+
+.inputDiv input:focus {
+  color: var(--colors-foreground-inverse);
+}
+
+.inputDiv input, .inputDiv svg {
+  z-index: 1;
+}
+
+.inputDiv svg {
+  height: var(--gap-normal);
+  width: var(--gap-normal);
+  fill: var(--colors-foreground-dark);
+}
+
+svg, g, circle, path {
+  transition: none;
+}
+
+.inputDiv input:focus ~ svg {
+  fill: var(--colors-foreground-inverse);
+}
+
+.inputDiv .background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--colors-background-lighter);
+  z-index: 0;
+}
+
+.inputDiv input:focus ~ .background {
+  background-color: var(--colors-background-inverse);
+}
+
+.root label {
+  color: var(--colors-foreground-darker);
+  font-family: var(--font-family-plex-circular);
+  font-size: var(--font-size-large);
+}
