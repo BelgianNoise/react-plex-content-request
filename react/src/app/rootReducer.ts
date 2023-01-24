@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { registerAccount } from '../features/auth/authThunks';
 import { Notification } from '../models/notification.model';
 
 export interface AppRootState {
@@ -26,11 +25,7 @@ export const appRootSlice = createSlice({
       state.notifications = [];
     },
   },
-  extraReducers: (builder) => { builder
-    .addCase(registerAccount.pending, (state) => { state.loading = true })
-    .addCase(registerAccount.fulfilled, (state) => { state.loading = false })
-    .addCase(registerAccount.rejected, (state) => { state.loading = false });
-  },
+  extraReducers: (builder) => { },
 });
 
 export const {

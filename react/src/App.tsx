@@ -7,17 +7,28 @@ import { Submit } from './features/submit/Submit';
 import { Auth } from './features/auth/Auth';
 import { Home } from './features/home/Home';
 import { Overview } from './features/overview/Overview';
-import { useAppSelector } from './app/hooks';
+import { useAppDispatch, useAppSelector } from './app/hooks';
+import { hideAuthWindow } from './features/auth/authSlice';
+import { MouseEvent, MouseEventHandler } from 'react';
 
 function App() {
   const showAuthWindow = useAppSelector((state) => state.auth.showAuthWindow);
+  const dispatch = useAppDispatch();
+
+  const closeAuthWindow: MouseEventHandler<HTMLDivElement> = (event) => {
+    // event.target is the specific element and event.currentTarget will always be the div container
+    // So only if a user clicks on the div container itself the window must close
+    if ( event.target === event.currentTarget) {
+      dispatch(hideAuthWindow());
+    }
+  };
 
   return (
     <HashRouter>
       <div className={styles.root}>
 
         {showAuthWindow ? (
-          <div className={styles.authWindow}>
+          <div className={styles.authWindow} onClick={closeAuthWindow}>
             <Auth />
           </div>
         ) : undefined}

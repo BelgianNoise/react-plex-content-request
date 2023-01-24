@@ -1,0 +1,22 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-normal);
+}
+
+.passwordContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-small);
+}
+
+.forgotPassword {
+  color: var(--colors-plex-primary);
+  font-size: var(--font-size-normal);
+  cursor: pointer;
+  margin-left: var(--gap-normal);
+}
+
+.forgotPassword:hover {
+  text-decoration: underline;
+}

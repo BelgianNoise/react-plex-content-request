@@ -28,6 +28,14 @@
         "register": "Register",
         "forgot-password": "Reset password",
         "tool-tip": "All authentication is secured and handled by Google's Firebase Authentication service. I am able to see all registered emails but NOT their passwords. Only YOU are able to reset your password."
+      },
+
+      "components": {
+        "login": {
+          "email-label": "Email",
+          "password-label": "Password",
+          "forgot-password-span": "Forgot password ?"
+        }
       }
     }
   }

@@ -20,17 +20,15 @@
   to { margin-top: 15%; }
 }
 
-.header, .footer, .content {
-  padding: var(--gap-normal) var(--gap-large);
-}
-
 .header, .footer {
+  padding: var(--gap-normal) var(--gap-large);
   background-color: var(--colors-background-light);
   padding: var(--gap-normal) var(--gap-large);
 }
 
 .content {
   background-color: var(--colors-background-normal);
+  padding: var(--gap-large);
 }
 
 .header {

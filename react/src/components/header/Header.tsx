@@ -5,6 +5,7 @@ import plexLogoLettersWhite from '../../assets/plex-logo-letters-white.png';
 import { LanguageSelector } from '../language-selector/LanguageSelector';
 import { useTranslation } from 'react-i18next';
 import { showAuthWindow } from '../../features/auth/authSlice';
+import { Button } from '../button/Button';
 
 export function Header() {
   const isLoggedIn = useAppSelector((state) => state.auth.isLoggedIn);
@@ -39,9 +40,11 @@ export function Header() {
 
         <LanguageSelector />
 
-        <button className='primary' onClick={() => handleAuthButtonClick()}>
-          {t(`components.header.${isLoggedIn ? 'sign-out' : 'sign-in'}`)}
-        </button>
+        <Button
+          text={t(`components.header.${isLoggedIn ? 'sign-out' : 'sign-in'}`)}
+          style={'primary'}
+          onClick={handleAuthButtonClick}
+        />
 
       </div>
 

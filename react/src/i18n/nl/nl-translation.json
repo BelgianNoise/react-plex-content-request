@@ -28,6 +28,14 @@
         "register": "Account aanmaken",
         "forgot-password": "Wachtwoord resetten",
         "tool-tip": "Alle gegevens worden beveiligd en onderhouden door Google's Firebase Authentication service. Ik kan van elke gebruiker het email adres zien maar NIET het wachtwoord. Enkel JIJ kan je wachtwoord aanpassen adhv een email."
+      },
+
+      "components": {
+        "login": {
+          "email-label": "Email",
+          "password-label": "Wachtwoord",
+          "forgot-password-span": "Wachtwoord vergeten ?"
+        }
       }
     }
   }

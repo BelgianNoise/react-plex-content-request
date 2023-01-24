@@ -9,12 +9,14 @@ import { Register, RegisterRef } from './components/register/Register';
 import { ResetPassword, ResetPasswordRef } from './components/reset-password/ResetPassword';
 import { AuthWindowStatus } from '../../models/auth-window-status';
 import { useRef } from 'react';
+import { Button } from '../../components/button/Button';
 
 export function Auth() {
 
   const { t } = useTranslation();
   const dispatch = useAppDispatch();
   const authWindowStatus = useAppSelector((state) => state.auth.status);
+  const loading = useAppSelector((state) => state.auth.loading);
 
   const loginRef = useRef<LoginRef>(null);
   const registerRef = useRef<RegisterRef>(null);
@@ -51,9 +53,13 @@ export function Auth() {
             {t('features.auth.footer.tool-tip')}
           </div>
         </div>
-        <button className='primary' onClick={handleButtonPress}>
-          {t(`features.auth.footer.${authWindowStatus}`)}
-        </button>
+        <Button
+          style={'primary'}
+          text={t(`features.auth.footer.${authWindowStatus}`)}
+          onClick={handleButtonPress}
+          disabled={loading}
+          loading={loading}
+        />
       </div>
 
     </div>
