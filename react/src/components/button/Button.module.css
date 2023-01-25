@@ -30,14 +30,20 @@
 }
 
 .wave {
-  background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.25));
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0.25) 50%,
+    rgba(0,0,0,0) 51%,
+    rgba(0,0,0,0.25) 100%
+  );
   background-repeat: repeat-x;
   animation: wave 1s linear infinite;
-  background-size: 50%;
-  background-position: 0%;
+  background-size: 200%;
+  background-position: right;
 }
 
 @keyframes wave {
-  from { background-position: 0% 0; }
-  to { background-position: 100% 0; }
+  from { background-position: right; }
+  to { background-position: left; }
 }
