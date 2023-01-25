@@ -54,11 +54,12 @@ export function Auth() {
           </div>
         </div>
         <Button
-          style={'primary'}
+          buttonStyle={'primary'}
           text={t(`features.auth.footer.${authWindowStatus}`)}
           onClick={handleButtonPress}
           disabled={loading}
           loading={loading}
+          loadingEffect={'spinner'}
         />
       </div>
 

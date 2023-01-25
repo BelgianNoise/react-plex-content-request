@@ -1,0 +1,43 @@
+.button {
+  position: relative;
+  display: flex;
+  gap: var(--gap-small);
+  align-items: center;
+}
+
+.spinnerContainer {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  top: 0;
+  left: var(--gap-small);
+}
+
+.spinnerContainer svg {
+  animation: spin 0.7s ease-out infinite;
+  transform: rotate(45deg);
+  height: calc(100% - 2*var(--gap-small));
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% {  transform: rotate(359deg); }
+}
+
+.spacer {
+  width: var(--gap-small);
+}
+
+.wave {
+  background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.25));
+  background-repeat: repeat-x;
+  animation: wave 1s linear infinite;
+  background-size: 50%;
+  background-position: 0%;
+}
+
+@keyframes wave {
+  from { background-position: 0% 0; }
+  to { background-position: 100% 0; }
+}

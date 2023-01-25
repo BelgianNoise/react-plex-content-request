@@ -82,10 +82,16 @@ button.primary {
   background-color: var(--colors-plex-primary);
   color: var(--colors-white);
 }
+button.primary svg {
+  fill: var(--colors-white);
+}
 button.secondary {
   background-color: transparent;
   color: var(--colors-plex-primary);
   border: 1px solid var(--colors-plex-primary);
+}
+button.secondary svg {
+  fill: var(--colors-plex-primary);
 }
 
 input, textarea {

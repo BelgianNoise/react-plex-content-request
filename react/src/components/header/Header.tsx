@@ -42,7 +42,7 @@ export function Header() {
 
         <Button
           text={t(`components.header.${isLoggedIn ? 'sign-out' : 'sign-in'}`)}
-          style={'primary'}
+          buttonStyle={'primary'}
           onClick={handleAuthButtonClick}
         />
 

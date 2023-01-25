@@ -8,7 +8,6 @@ export function Home() {
   return (
     <div className={styles.root}>
       NEXT UP:<br/>
-        - Add two loading styles to Button<br/>
         - Finish Login component <br/>
         - Implement login with firebase <br/>
     </div>
