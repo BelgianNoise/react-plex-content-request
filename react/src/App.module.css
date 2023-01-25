@@ -39,3 +39,11 @@
   background-color: #000000BB;
   backdrop-filter: blur(3px);
 }
+
+.loadingContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}

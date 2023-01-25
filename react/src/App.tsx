@@ -9,7 +9,8 @@ import { Home } from './features/home/Home';
 import { Overview } from './features/overview/Overview';
 import { useAppDispatch, useAppSelector } from './app/hooks';
 import { hideAuthWindow } from './features/auth/authSlice';
-import { MouseEvent, MouseEventHandler } from 'react';
+import { MouseEventHandler } from 'react';
+import { Loading } from './components/loading/Loading';
 
 function App() {
   const showAuthWindow = useAppSelector((state) => state.auth.showAuthWindow);
@@ -23,9 +24,18 @@ function App() {
     }
   };
 
+  const showLoadingBar = useAppSelector((state) =>
+    state.root.loading || state.auth.loading);
+
   return (
     <HashRouter>
       <div className={styles.root}>
+
+        {showLoadingBar ? (
+          <div className={styles.loadingContainer}>
+            <Loading />
+          </div>
+        ) : undefined}
 
         {showAuthWindow ? (
           <div className={styles.authWindow} onClick={closeAuthWindow}>
