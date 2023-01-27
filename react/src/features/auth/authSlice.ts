@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { useAppDispatch } from '../../app/hooks';
 import { AuthWindowStatus } from '../../models/auth-window-status';
 import { login, logout, registerAccount } from './authThunks';
 

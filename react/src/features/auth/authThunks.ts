@@ -1,4 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { firebaseAuth } from "../../app/firebase";
+import { addNotification } from "../../app/notificationThunks";
 
 export const registerAccount = createAsyncThunk('auth/register',
   async (args: {
@@ -19,15 +22,17 @@ export const login = createAsyncThunk('auth/login',
   async (args: {
     email: string,
     password: string,
-  }) => {
-    console.log('Logging in');
-    return new Promise<void>((resolve) =>
-      setTimeout(() => {
-        console.log('Logged in -', args);
-        resolve()
-      }, 3000)
-    );
-  }
+  }, thunkapi) => {
+    try {
+      await signInWithEmailAndPassword(firebaseAuth, args.email, args.password);
+    } catch (error: unknown) {
+      thunkapi.dispatch(addNotification({
+        type: 'error',
+        message: (error as any).message,
+        id: new Date().toString(),
+      }));
+    }
+  },
 );
 
 export const logout = createAsyncThunk('auth/logout',

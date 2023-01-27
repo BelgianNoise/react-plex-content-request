@@ -11,6 +11,7 @@ import { useAppDispatch, useAppSelector } from './app/hooks';
 import { hideAuthWindow } from './features/auth/authSlice';
 import { MouseEventHandler } from 'react';
 import { Loading } from './components/loading/Loading';
+import { Notifications } from './components/notifications/Notifications';
 
 function App() {
   const showAuthWindow = useAppSelector((state) => state.auth.showAuthWindow);
@@ -24,6 +25,7 @@ function App() {
     }
   };
 
+  const showNotifications = useAppSelector((state) => state.root.notifications.length);
   const showLoadingBar = useAppSelector((state) =>
     state.root.loading || state.auth.loading);
 
@@ -34,6 +36,12 @@ function App() {
         {showLoadingBar ? (
           <div className={styles.loadingContainer}>
             <Loading />
+          </div>
+        ) : undefined}
+
+        {showNotifications ? (
+          <div className={styles.notificationsContainer}>
+            <Notifications />
           </div>
         ) : undefined}
 

@@ -1,4 +1,6 @@
 export interface Notification {
   id: string;
-  value: string;
+  message: string | (() => JSX.Element);
+  type?: 'success' | 'normal' | 'warning' | 'error';
+  timeout?: number;
 }
