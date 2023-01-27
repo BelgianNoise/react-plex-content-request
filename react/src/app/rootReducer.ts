@@ -1,6 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Notification } from '../models/notification.model';
-import { useAppDispatch } from './hooks';
 import { addNotification } from './notificationThunks';
 
 export interface AppRootState {
