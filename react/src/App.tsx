@@ -15,6 +15,7 @@ import { Notifications } from './components/notifications/Notifications';
 import { firebaseAuth } from './app/firebase';
 import { User } from 'firebase/auth';
 import { setIsLoggedIn } from './features/auth/authThunks';
+import { firestoreSubscribe } from './app/firestore';
 
 function App() {
   const showAuthWindow = useAppSelector((state) => state.auth.showAuthWindow && !state.auth.isLoggedIn);
@@ -35,6 +36,8 @@ function App() {
   firebaseAuth.onAuthStateChanged((user: User | null) => {
     dispatch(setIsLoggedIn(!!user))
   });
+
+  const firestoreUnsub = firestoreSubscribe(dispatch);
 
   return (
     <HashRouter>

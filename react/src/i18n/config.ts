@@ -16,7 +16,7 @@ i18next
   .init({
     fallbackLng: ['nl', 'en'],
     resources,
-    debug: true,
+    // debug: true,
     detection: {
       order: ['localStorage'],
       lookupLocalStorage: 'i18nextLng',
