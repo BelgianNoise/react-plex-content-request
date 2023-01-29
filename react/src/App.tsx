@@ -7,9 +7,9 @@ import { Submit } from './features/submit/Submit';
 import { Auth } from './features/auth/Auth';
 import { Home } from './features/home/Home';
 import { Overview } from './features/overview/Overview';
-import { useAppDispatch, useAppSelector } from './app/hooks';
+import { useAppDispatch, useAppSelector, useEffectOnce } from './app/hooks';
 import { hideAuthWindow } from './features/auth/authSlice';
-import { MouseEventHandler } from 'react';
+import { MouseEventHandler, useCallback, useEffect, useMemo } from 'react';
 import { Loading } from './components/loading/Loading';
 import { Notifications } from './components/notifications/Notifications';
 import { firebaseAuth } from './app/firebase';
@@ -33,11 +33,17 @@ function App() {
   const showLoadingBar = useAppSelector((state) =>
     state.root.loading || state.auth.loading);
 
-  firebaseAuth.onAuthStateChanged((user: User | null) => {
-    dispatch(setIsLoggedIn(!!user))
+  // See custom hook in hooks.ts
+  useEffectOnce(() => {
+
+    firebaseAuth.onAuthStateChanged((user: User | null) => {
+      dispatch(setIsLoggedIn(!!user))
+    });
+
+    firestoreSubscribe(dispatch);
+
   });
 
-  const firestoreUnsub = firestoreSubscribe(dispatch);
 
   return (
     <HashRouter>
