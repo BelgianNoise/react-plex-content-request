@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<svg viewBox="0 0 72 72" id="emoji" xmlns="http://www.w3.org/2000/svg">
+  <g id="color">
+    <rect x="24" y="18" width="36" height="7" stroke="none"/>
+    <rect x="24" y="33" width="36" height="7" stroke="none"/>
+    <rect x="24" y="48" width="36" height="7" stroke="none"/>
+    <rect x="12" y="48" width="7" height="7" stroke="none"/>
+    <rect x="12" y="33" width="7" height="7" stroke="none"/>
+    <rect x="12" y="18" width="7" height="7" stroke="none"/>
+  </g>
+</svg>
