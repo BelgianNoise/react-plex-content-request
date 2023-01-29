@@ -37,6 +37,12 @@
           "forgot-password-span": "Wachtwoord vergeten ?"
         }
       }
+    },
+    "home": {
+      "header-text": "Er zijn in totaal al {{amount}} aanvragen vervuld!",
+      "overview-card-text": "Bekijk een overzicht van alle aanvragen door jou en andere personen.",
+      "my-requests-card-text": "Wil je de status zien van jouw aanvraag of wil je een aanvraag verwijderen? Bekijk een overzicht van al jouw aanvragen.",
+      "submit-request-card-text": "Kan je een film of serie niet vinden op Plex? Dien dan hier een nieuwe aanvraag in."
     }
   }
 }

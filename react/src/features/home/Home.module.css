@@ -17,13 +17,19 @@ h1 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: var(--gap-large);
+  gap: var(--gap-normal);
+}
+
+@media only screen and (min-width: 1200px) {
+  .cardContainer {
+    gap: var(--gap-large);
+  }
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-normal);
+  gap: var(--gap-large);
   align-items: center;
   border-radius: var(--gap-tiny);
   cursor: pointer;
@@ -32,7 +38,7 @@ h1 {
   padding: var(--gap-large);
   height: calc(100% - 2 * var(--gap-large));
   max-width: 180px;
-  font-size: var(--font-size-large);
+  background-color: #00000030;
 }
 
 .card:hover {
