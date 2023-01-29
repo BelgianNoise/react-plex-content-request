@@ -33,6 +33,7 @@ h1 {
   height: calc(100% - 2 * var(--gap-large));
   max-width: 180px;
   background-color: #00000030;
+  font-size: var(--font-size-huge);
 }
 
 .card:hover {
@@ -41,7 +42,7 @@ h1 {
 }
 
 .card svg {
-  width: 25%;
+  width: 40%;
   fill: var(--colors-plex-primary);
 }
 
