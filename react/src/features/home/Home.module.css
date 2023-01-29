@@ -20,16 +20,10 @@ h1 {
   gap: var(--gap-normal);
 }
 
-@media only screen and (min-width: 1200px) {
-  .cardContainer {
-    gap: var(--gap-large);
-  }
-}
-
 .card {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-large);
+  gap: var(--gap-normal);
   align-items: center;
   border-radius: var(--gap-tiny);
   cursor: pointer;
@@ -55,4 +49,13 @@ h1 {
   flex: 1;
   display: flex;
   align-items: center;
+}
+
+@media only screen and (min-width: 1200px) {
+  .cardContainer {
+    gap: var(--gap-large);
+  }
+  .card {
+    gap: var(--gap-large);
+  }
 }
