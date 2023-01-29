@@ -1,0 +1,52 @@
+.root {
+  padding: var(--gap-huge) var(--gap-normal) 0 var(--gap-normal);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-huge);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+h1 {
+  width: 70%;
+}
+
+.cardContainer {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: var(--gap-large);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-normal);
+  align-items: center;
+  border-radius: var(--gap-tiny);
+  cursor: pointer;
+  border: 1px solid var(--colors-plex-primary);
+  transition: all 0.1s ease-out;
+  padding: var(--gap-large);
+  height: calc(100% - 2 * var(--gap-large));
+  max-width: 180px;
+  font-size: var(--font-size-large);
+}
+
+.card:hover {
+  background-color: var(--colors-background-dark);
+  transform: scale(1.2);
+}
+
+.card svg {
+  width: 25%;
+  fill: var(--colors-plex-primary);
+}
+
+.textContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}

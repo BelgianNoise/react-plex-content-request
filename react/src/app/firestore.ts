@@ -22,7 +22,7 @@ export const tranformToObject = (
 
   const newReq: Request = {
     id: doc.id,
-    date: Number(new Date(data.date).toString()),
+    date: new Date(data.date).getTime(),
     text: data.content,
     requester: data.requester,
     status,
@@ -65,7 +65,6 @@ export const firestoreSubscribe = (dispatch: ReturnType<typeof useAppDispatch>) 
     const req = tranformToObject(typedDoc);
     if (change.type === 'added') {
       dispatch(addRequests([ req ]));
-      console.log('added', change.doc.id);
     }
     if (change.type === 'modified') {
       dispatch(updateRequest(req));
