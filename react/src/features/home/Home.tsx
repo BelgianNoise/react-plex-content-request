@@ -6,11 +6,14 @@ import { ReactComponent as MyRequestsSVG } from '../../assets/my-requests.svg';
 import { ReactComponent as SubmitRequestSVG } from '../../assets/submit-request.svg';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { RequestSmall } from '../../components/request-small/RequestSmall';
 
 export function Home() {
   const requests = useAppSelector((state) => state.data.requests);
   const requestsFulfilled = requests.filter((r) => r.status === 'fulfilled').length;
-  const latestRequest = requests[0];
+  const lastRequest = requests[0];
+  const oneButLastRequest = requests[1];
+
   const { t } = useTranslation();
 
   return (
@@ -20,9 +23,15 @@ export function Home() {
         {t('features.home.header-text', { amount: requestsFulfilled })}
       </h1>
 
-      <div>
-        {latestRequest?.id} {latestRequest?.date} {latestRequest?.text}
-      </div>
+      {lastRequest && oneButLastRequest ? (
+        <div className={styles.latestRequests}>
+          <h2>Latest requests</h2>
+          <div className={styles.requests}>
+            <RequestSmall request={lastRequest} />
+            <RequestSmall request={oneButLastRequest} />
+          </div>
+        </div>
+      ) : undefined}
 
       <div className={styles.cardContainer}>
         <NavLink to='/overview'>

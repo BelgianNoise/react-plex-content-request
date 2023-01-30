@@ -2,7 +2,7 @@
   padding: var(--gap-huge) var(--gap-normal) 0 var(--gap-normal);
   display: flex;
   flex-direction: column;
-  gap: var(--gap-huge);
+  gap: var(--gap-large);
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -31,7 +31,7 @@ h1 {
   transition: all 0.1s ease-out;
   padding: var(--gap-large);
   height: calc(100% - 2 * var(--gap-large));
-  max-width: 180px;
+  max-width: 260px;
   background-color: #00000030;
   font-size: var(--font-size-huge);
 }
@@ -42,7 +42,7 @@ h1 {
 }
 
 .card svg {
-  width: 40%;
+  width: 30%;
   fill: var(--colors-plex-primary);
 }
 
@@ -59,4 +59,18 @@ h1 {
   .card {
     gap: var(--gap-large);
   }
+}
+
+.latestRequests {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-normal);
+}
+
+.latestRequests .requests {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap-normal);
 }

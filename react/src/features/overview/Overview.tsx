@@ -4,12 +4,12 @@ export function Overview() {
   return (
     <div>
       NEXT UP:<br/>
-        - implement home page<br/>
-        - style notifications<br/>
-        - style not logged in page<br/>
-        - style 404 page<br/>
-        - implement account registration<br/>
-        - implement password reset<br/>
+        - style notifications <br/>
+        - style not logged in page <br/>
+        - style 404 page <br/>
+        - implement account registration <br/>
+        - implement password reset <br/>
+        - implement getImageSrc() <br/>
     </div>
   );
 }

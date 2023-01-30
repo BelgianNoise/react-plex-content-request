@@ -13,6 +13,10 @@
     "header": {
       "sign-in": "Sign in",
       "sign-out": "Sign out"
+    },
+    "request-small": {
+      "status": "Status",
+      "by": "by"
     }
   },
 
@@ -44,5 +48,27 @@
       "my-requests-card-text": "View or delete your personal content requests.",
       "submit-request-card-text": "Can't find what you are looking for on Plex? Submit a new content request."
     }
+  },
+
+  "date": {
+    "a-few-seconds-ago": "a few seconds ago",
+    "x-seconds-ago": "{{amount}} seconds ago",
+    "a-few-minutes-ago": "a few minutes ago",
+    "x-minutes-ago": "{{amount}} minutes ago",
+    "one-hour-ago": "one hour ago",
+    "x-hours-ago": "{{amount}} hours ago",
+    "one-day-ago": "one day ago",
+    "x-days-ago": "{{amount}} days ago",
+    "one-month-ago": "one month ago",
+    "x-months-ago": "{{amount}} months ago",
+    "one-year-ago": "one year ago",
+    "x-years-ago": "{{amount}} years ago"
+  },
+
+  "common": {
+    "fulfilled": "fulfilled",
+    "pending": "pending",
+    "rejected": "rejected",
+    "busy": "busy..."
   }
 }

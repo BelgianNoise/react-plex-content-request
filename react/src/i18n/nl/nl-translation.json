@@ -13,6 +13,10 @@
     "header": {
       "sign-in": "Aanmelden",
       "sign-out": "Afmelden"
+    },
+    "request-small": {
+      "status": "Status",
+      "by": "door"
     }
   },
 
@@ -39,10 +43,32 @@
       }
     },
     "home": {
-      "header-text": "Er zijn in totaal al {{amount}} aanvragen vervuld!",
+      "header-text": "Er zijn in totaal al {{amount}} aanvragen volbracht!",
       "overview-card-text": "Bekijk een overzicht van alle aanvragen.",
       "my-requests-card-text": "Bekijk de status van of verwijder jouw aanvragen.",
       "submit-request-card-text": "Kan je niet vinden wat je zoekt op Plex? Dien dan hier een nieuwe aanvraag in."
     }
+  },
+
+  "date": {
+    "a-few-seconds-ago": "een paar seconden geleden",
+    "x-seconds-ago": "{{amount}} seconden geleden",
+    "a-few-minutes-ago": "een paar minuten geleden",
+    "x-minutes-ago": "{{amount}} minuten geleden",
+    "one-hour-ago": "een uur geleden",
+    "x-hours-ago": "{{amount}} uur geleden",
+    "one-day-ago": "een dag geleden",
+    "x-days-ago": "{{amount}} dagen geleden",
+    "one-month-ago": "een maand geleden",
+    "x-months-ago": "{{amount}} maanden geleden",
+    "one-year-ago": "een jaar geleden",
+    "x-years-ago": "{{amount}} jaar geleden"
+  },
+
+  "common": {
+    "fulfilled": "volbracht",
+    "pending": "in aanvraag",
+    "rejected": "afgewezen",
+    "busy": "bezig..."
   }
 }
