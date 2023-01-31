@@ -30,7 +30,7 @@ export function Notifications() {
     return (
       <div key={noti.id} className={classname}>
         {svg}
-        <p>{t(noti.message)}</p>
+        <p>{t(noti.message as any)}</p>
         <div
           className={styles.closeButton}
           onClick={() => dispatch(removeNotification(noti))}
