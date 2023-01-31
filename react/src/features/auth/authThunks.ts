@@ -30,7 +30,7 @@ export const login = createAsyncThunk('auth/login',
       thunkapi.dispatch(addNotification({
         type: 'error',
         message: (error as any).message,
-        id: new Date().toString(),
+        id: new Date().getTime().toString(),
       }));
     }
   },
