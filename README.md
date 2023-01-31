@@ -12,17 +12,17 @@ These features should be implemented in every version:
  - Routing
  - Global State Management
  - i18n
- - Authentication via Firebase Auth
- - CR(U)D operations on a Firebase Firestore (NoSQL document database)
+ - Authentication ( Firebase Auth or equivalent )
+ - CR(U)D operations with authorization ( Firebase Firestore (NoSQL document database) or equivalent )
 
 ## Status
 
-  - [**React**](https://reactjs.org/):     [gh-pages deployment](https://belgiannoise.github.io/web-frameworks/react/build/#/)
+  - [**React**](https://reactjs.org/):  --->   [gh-pages deployment](https://belgiannoise.github.io/web-frameworks/react/build/#/)
     - [x] Routing (react-router)
     - [x] Global State Management (Redux)
     - [x] i18n (react-i18next)
-    - [ ] Authentication via Firebase Auth
-    - [ ] CR(U)D operations on a Firebase Firestore (NoSQL document database)
+    - [ ] Authentication ( Firebase Auth )
+    - [ ] CR(U)D operations with authorization ( Firebase Firestore )
 
 #
   - Frameworks I want to try (in order of interest)
