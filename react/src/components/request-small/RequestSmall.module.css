@@ -1,12 +1,9 @@
 .root {
-  flex: 1;
   display: flex;
   flex-direction: row;
-  align-items: stretch;
 
   border-radius: var(--gap-small);
   background-color: var(--colors-background-darker);
-  overflow: hidden;
 }
 
 .root img {
@@ -19,15 +16,16 @@
 }
 
 .infoPane {
-  flex: 1;
+  height: 100%;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   gap: 0;
-  padding: var(--gap-normal);
+  justify-content: center;
+  padding: 0 var(--gap-normal);
+  overflow: hidden;
 }
 
 .infoPane > p {
-  max-width: calc(100% - var(--gap-normal));
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

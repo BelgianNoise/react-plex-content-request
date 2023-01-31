@@ -21,7 +21,7 @@
 
 a .navItem {
   width: 100%;
-  font-size: var(--font-size-header-small);
+  font-size: var(--font-size-huge);
   fill: var(--colors-foreground-normal);
 
   display: flex;
