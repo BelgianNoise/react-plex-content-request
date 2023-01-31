@@ -16,6 +16,7 @@ import { firebaseAuth } from './app/firebase';
 import { User } from 'firebase/auth';
 import { setIsLoggedIn } from './features/auth/authThunks';
 import { firestoreSubscribe } from './app/firestore';
+import { MyRequests } from './features/my-requests/MyRequests';
 
 function App() {
   const showAuthWindow = useAppSelector((state) => state.auth.showAuthWindow && !state.auth.isLoggedIn);
@@ -78,7 +79,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/overview" element={<Overview />} />
-                <Route path="/my-requests" element={<Overview />} />
+                <Route path="/my-requests" element={<MyRequests />} />
                 <Route path="/submit-request" element={<Submit />} />
                 <Route path="*" element={<PageNotFound />} />
               </Routes>
