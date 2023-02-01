@@ -4,7 +4,7 @@ In this reposity I will strive to create a website using as many different web f
 
 ## Features of the website
 
-These features should be implemented in every version:
+These features should be implemented on every site:
  - Routing
  - Global State Management
  - i18n
