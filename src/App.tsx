@@ -1,4 +1,4 @@
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import styles from './App.module.css';
 import { Header } from './components/header/Header';
 import { Nav } from './components/nav/Nav';
@@ -9,7 +9,7 @@ import { Home } from './features/home/Home';
 import { Overview } from './features/overview/Overview';
 import { useAppDispatch, useAppSelector, useEffectOnce } from './app/hooks';
 import { hideAuthWindow } from './features/auth/authSlice';
-import { MouseEventHandler, useCallback, useEffect, useMemo } from 'react';
+import { MouseEventHandler } from 'react';
 import { Loading } from './components/loading/Loading';
 import { Notifications } from './components/notifications/Notifications';
 import { firebaseAuth } from './app/firebase';
@@ -47,7 +47,7 @@ function App() {
 
 
   return (
-    <HashRouter>
+    <BrowserRouter>
       <div className={styles.root}>
 
         {showLoadingBar ? (
@@ -88,7 +88,7 @@ function App() {
           </div>
         </div>
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
