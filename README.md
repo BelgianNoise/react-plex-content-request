@@ -2,7 +2,7 @@
 
 ## Website concept
 
-Create a website where people can request new content to be added to my Plex media server.
+A website where people can request new content to be added to my Plex media server.
 
 ## Status
 
