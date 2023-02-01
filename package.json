@@ -1,7 +1,7 @@
 {
   "name": "content-request",
   "version": "0.1.0",
-  "homepage": "https://nasaj.be",
+  "homepage": "https://nasaj.be/",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.1",
