@@ -75,8 +75,6 @@ a {
 
 button {
   cursor: pointer;
-  padding: var(--gap-small) var(--gap-normal);
-  border-radius: var(--gap-tiny);
   border: none;
 }
 button.primary {

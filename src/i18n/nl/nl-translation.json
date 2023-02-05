@@ -51,6 +51,10 @@
       "overview-card-text": "Bekijk een overzicht van alle aanvragen.",
       "my-requests-card-text": "Bekijk de status van of verwijder jouw aanvragen.",
       "submit-request-card-text": "Kan je niet vinden wat je zoekt op Plex? Dien dan hier een nieuwe aanvraag in."
+    },
+    "overview": {
+      "filters": "Filters",
+      "show-more-requests": "Toon meer resultaten ..."
     }
   },
 

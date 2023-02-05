@@ -3,21 +3,35 @@
   display: flex;
   gap: var(--gap-small);
   align-items: center;
+
+  font-size: var(--font-size-huge);
+  padding: var(--gap-small) var(--gap-normal);
+  border-radius: calc((2 * var(--gap-small) + var(--font-size-huge)) / 2);
 }
 
-.spinnerContainer {
+.iconContainer {
   position: absolute;
   height: 100%;
   display: flex;
   align-items: center;
   top: 0;
+}
+
+.iconContainer.left {
   left: var(--gap-small);
 }
 
-.spinnerContainer svg {
+.iconContainer.right {
+  right: var(--gap-small);
+}
+
+.iconContainer svg {
+  height: calc(100% - 2*var(--gap-small));
+}
+
+.iconContainer.loading svg {
   animation: spin 0.7s ease-out infinite;
   transform: rotate(45deg);
-  height: calc(100% - 2*var(--gap-small));
 }
 
 @keyframes spin {

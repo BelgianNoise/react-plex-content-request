@@ -1,10 +1,13 @@
 import styles from './Button.module.css';
 import {ReactComponent as LoadingSVG} from '../../assets/loading.svg';
+import { ReactElement } from 'react';
 
 export interface ButtonProps {
   onClick: () => any;
   text: string;
   buttonStyle: 'primary' | 'secondary';
+  icon?: ReactElement<any, any>;
+  iconSide?: 'left' | 'right';
   loading?: boolean;
   disabled?: boolean;
   loadingEffect?: 'spinner' | 'wave';
@@ -18,7 +21,10 @@ export function Button(props: ButtonProps) {
 
   let buttonClassName = `${props.buttonStyle} ${styles.button}`;
   if (props.loading && props.loadingEffect === 'wave') buttonClassName += ` ${styles.wave}`;
-  const spinnerVisible = props.loading && props.loadingEffect === 'spinner';
+  const loadingVisible = props.loading && props.loadingEffect === 'spinner';
+  const iconVisible = loadingVisible || props.icon;
+  let iconContainerClass = `${styles.iconContainer} ${styles[props.iconSide ?? 'left']}`;
+  if (loadingVisible) iconContainerClass += ` ${styles.loading}`;
 
   return (
     <div className={styles.root}>
@@ -28,15 +34,15 @@ export function Button(props: ButtonProps) {
         onClick={handleClick}
         disabled={props.disabled}
       >
-        {spinnerVisible ? 
-          <div className={styles.spinnerContainer}>
-            <LoadingSVG />
+        {iconVisible ? 
+          <div className={iconContainerClass}>
+            {loadingVisible ? (<LoadingSVG />) : (<>{props.icon}</>)}
           </div>
         : undefined}
 
-        {spinnerVisible ? <div className={styles.spacer}></div> : undefined}
-        
+        {iconVisible && props.iconSide !== 'right' ? <div className={styles.spacer}></div> : undefined}
         <span>{props.text}</span>
+        {iconVisible && props.iconSide === 'right' ? <div className={styles.spacer}></div> : undefined}
       </button>
 
     </div>

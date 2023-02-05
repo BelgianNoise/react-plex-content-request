@@ -81,7 +81,7 @@ function App() {
                 <Route path="/overview" element={<Overview />} />
                 <Route path="/my-requests" element={<MyRequests />} />
                 <Route path="/submit-request" element={<Submit />} />
-                <Route path="/*" element={<PageNotFound />} />
+                <Route path="*" element={<PageNotFound />} />
               </Routes>
 
             </div>
