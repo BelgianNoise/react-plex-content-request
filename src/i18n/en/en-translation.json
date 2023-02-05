@@ -17,6 +17,10 @@
     "request-small": {
       "status": "Status",
       "by": "by"
+    },
+    "page-not-found": {
+      "text": "Page not found",
+      "button-text": "Go back home"
     }
   },
 

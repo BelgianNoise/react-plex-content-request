@@ -17,6 +17,10 @@
     "request-small": {
       "status": "Status",
       "by": "door"
+    },
+    "page-not-found": {
+      "text": "Pagina niet gevonden",
+      "button-text": "Terug naar de startpagina"
     }
   },
 

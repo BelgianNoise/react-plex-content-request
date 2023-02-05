@@ -1,0 +1,19 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-large);
+  align-items: center;
+  text-align: center;
+  padding-top: var(--gap-huge);
+}
+
+.errorCode {
+  font-size: 200px;
+  font-weight: bold;
+  font-style: italic;
+  color: #FFFFFFAA
+}
+
+.text {
+  font-size: var(--font-size-header-large);
+}
