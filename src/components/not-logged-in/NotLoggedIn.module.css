@@ -1,0 +1,22 @@
+.root {
+  padding-top: var(--gap-large);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-large);
+  align-items: center;
+  text-align: center;
+}
+
+.root svg {
+  height: 160px;
+  fill: #FFFFFFBB;
+}
+
+.title {
+  font-size: var(--font-size-header-normal);
+}
+
+.subtitle {
+  font-size: var(--font-size-header-small);
+}
