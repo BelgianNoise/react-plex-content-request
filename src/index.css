@@ -75,7 +75,7 @@ a {
 
 button {
   cursor: pointer;
-  border: none;
+  border: 1px solid var(--colors-plex-primary);
 }
 button.primary {
   background-color: var(--colors-plex-primary);
@@ -87,7 +87,6 @@ button.primary svg {
 button.secondary {
   background-color: transparent;
   color: var(--colors-plex-primary);
-  border: 1px solid var(--colors-plex-primary);
 }
 button.secondary svg {
   fill: var(--colors-plex-primary);
