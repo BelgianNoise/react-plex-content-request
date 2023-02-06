@@ -34,6 +34,7 @@ export const Login = forwardRef((props: {}, ref: Ref<LoginRef>) => {
         label={t('features.auth.components.login.email-label')}
         icon={EmailSVG}
         autoComplete
+        onEnter={() => submit()}
       />
       <div className={styles.passwordContainer}>
         <TextInput
@@ -42,6 +43,7 @@ export const Login = forwardRef((props: {}, ref: Ref<LoginRef>) => {
           setValue={setPassword}
           label={t('features.auth.components.login.password-label')}
           icon={PasswordSVG}
+          onEnter={() => submit()}
         />
         <span
           className={styles.forgotPassword}

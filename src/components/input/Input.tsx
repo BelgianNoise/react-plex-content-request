@@ -9,9 +9,16 @@ export interface TextInputProps {
   label?: string;
   icon?: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
   autoComplete?: boolean;
+  onEnter?: () => void;
 }
 
 export function TextInput(props: TextInputProps) {
+  const onKeyDown = (ev: any) => {
+    if (props.onEnter && ev.key === 'Enter') {
+      props.onEnter();
+    }
+  };
+
   return (
     <div className={styles.root}>
       {props.label ? (
@@ -23,6 +30,7 @@ export function TextInput(props: TextInputProps) {
           value={props.value}
           onChange={(e) => props.setValue(e.target.value)}
           autoComplete={props.autoComplete ? 'on' : 'off'}
+          onKeyDown={onKeyDown}
         />
         {props.icon ? ( <props.icon /> ) : undefined}
         <div className={styles.background}></div>
