@@ -3,7 +3,7 @@ import styles from './Auth.module.css';
 import { ReactComponent as PlusSVG } from '../../assets/plus.svg';
 import { ReactComponent as InfoSVG } from '../../assets/info.svg';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
-import { hideAuthWindow } from './authSlice';
+import { goToForgotPassowrd, goToRegister, goToSignIn, hideAuthWindow } from './authSlice';
 import { Login, LoginRef } from './components/login/Login';
 import { Register, RegisterRef } from './components/register/Register';
 import { ResetPassword, ResetPasswordRef } from './components/reset-password/ResetPassword';
@@ -25,6 +25,33 @@ export function Auth() {
     loginRef.current?.submit();
     registerRef.current?.submit();
     resetPasswordRef.current?.submit();
+  };
+
+  const secondaryButton = () => {
+    switch (authWindowStatus) {
+      case AuthWindowStatus.SING_IN: return (
+        <Button
+          buttonStyle={'secondary'}
+          text={t(`features.auth.footer.register`)}
+          onClick={() => dispatch(goToRegister())}
+        />
+      );
+      case AuthWindowStatus.REGISTER: return (
+        <Button
+          buttonStyle={'secondary'}
+          text={t(`features.auth.footer.sign-in`)}
+          onClick={() => dispatch(goToSignIn())}
+        />
+      );
+      case AuthWindowStatus.FORGOT_PASSWORD: return (
+        <Button
+          buttonStyle={'secondary'}
+          text={t(`features.auth.footer.sign-in`)}
+          onClick={() => dispatch(goToSignIn())}
+        />
+      );
+      default: return (<></>)
+    }
   };
 
   return (
@@ -53,14 +80,18 @@ export function Auth() {
             {t('features.auth.footer.tool-tip')}
           </div>
         </div>
-        <Button
-          buttonStyle={'primary'}
-          text={t(`features.auth.footer.${authWindowStatus}`)}
-          onClick={handleButtonPress}
-          disabled={loading}
-          loading={loading}
-          loadingEffect={'spinner'}
-        />
+
+        <div className={styles.buttonContainer}>
+          {secondaryButton()}
+          <Button
+            buttonStyle={'primary'}
+            text={t(`features.auth.footer.${authWindowStatus}`)}
+            onClick={handleButtonPress}
+            disabled={loading}
+            loading={loading}
+            loadingEffect={'spinner'}
+          />
+        </div>
       </div>
 
     </div>

@@ -1,5 +1,9 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { signInWithEmailAndPassword, signOut } from "firebase/auth";
+import {
+  signInWithEmailAndPassword,
+  signOut,
+  createUserWithEmailAndPassword,
+} from "firebase/auth";
 import { firebaseAuth } from "../../app/firebase";
 import { addNotification } from "../../app/notificationThunks";
 import { hideAuthWindow } from "./authSlice";
@@ -8,14 +12,21 @@ export const registerAccount = createAsyncThunk('auth/register',
   async (args: {
     email: string,
     password: string,
-  }) => {
-    console.log('Registering account');
-    return new Promise<void>((resolve) =>
-      setTimeout(() => {
-        console.log('registered -', args);
-        resolve()
-      }, 3000)
-    );
+  }, thunkapi) => {
+    try {
+      await createUserWithEmailAndPassword(firebaseAuth, args.email, args.password);
+      thunkapi.dispatch(addNotification({
+        type: 'success',
+        message: 'notification.registered-account',
+        id: new Date().getTime().toString(),
+      }));
+    } catch (error: unknown) {
+      thunkapi.dispatch(addNotification({
+        type: 'error',
+        message: (error as any).message,
+        id: new Date().getTime().toString(),
+      }));
+    }
   }
 );
 
@@ -26,6 +37,11 @@ export const login = createAsyncThunk('auth/login',
   }, thunkapi) => {
     try {
       await signInWithEmailAndPassword(firebaseAuth, args.email, args.password);
+      thunkapi.dispatch(addNotification({
+        type: 'success',
+        message: 'notification.signed-in',
+        id: new Date().getTime().toString(),
+      }));
     } catch (error: unknown) {
       thunkapi.dispatch(addNotification({
         type: 'error',
@@ -37,8 +53,13 @@ export const login = createAsyncThunk('auth/login',
 );
 
 export const logout = createAsyncThunk('auth/logout',
-  async () => {
+  async (_, thunkapi) => {
     await signOut(firebaseAuth);
+    thunkapi.dispatch(addNotification({
+      type: 'warning',
+      message: 'notification.signed-out',
+      id: new Date().getTime().toString(),
+    }));
   }
 );
 

@@ -47,6 +47,11 @@
           "email-label": "Email",
           "password-label": "Password",
           "forgot-password-span": "Forgot password ?"
+        },
+        "register": {
+          "email-label": "Email",
+          "password-label": "Password",
+          "confirm-password-label": "Confirm Password"
         }
       }
     },
@@ -85,5 +90,12 @@
     "pending": "pending",
     "rejected": "rejected",
     "busy": "busy..."
+  },
+  
+  "notification": {
+    "signed-in": "You are now signed in!",
+    "registered-account": "Your account was successfully created!",
+    "signed-out": "You are now signed out!",
+    "password-mismatch": "Please make sure the entered passwords are equal!"
   }
 }

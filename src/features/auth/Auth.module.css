@@ -83,3 +83,9 @@
 .footer .toolTipContainer:hover .toolTip {
   display: block;
 }
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  gap: calc(var(--gap-small) + var(--gap-tiny));
+}
