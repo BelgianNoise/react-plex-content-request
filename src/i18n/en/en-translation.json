@@ -52,6 +52,9 @@
           "email-label": "Email",
           "password-label": "Password",
           "confirm-password-label": "Confirm Password"
+        },
+        "reset-password": {
+          "email-label": "Email"
         }
       }
     },
@@ -96,6 +99,7 @@
     "signed-in": "You are now signed in!",
     "registered-account": "Your account was successfully created!",
     "signed-out": "You are now signed out!",
-    "password-mismatch": "Please make sure the entered passwords are equal!"
+    "password-mismatch": "Please make sure the entered passwords are equal!",
+    "password-reset-mail-sent": "An email has been sent to reset your password!"
   }
 }

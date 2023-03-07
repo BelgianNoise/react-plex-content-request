@@ -52,6 +52,9 @@
           "email-label": "Email",
           "password-label": "Wachtwoord",
           "confirm-password-label": "Bevestig Wachtwoord"
+        },
+        "reset-password": {
+          "email-label": "Email"
         }
       }
     },
@@ -96,6 +99,7 @@
     "signed-in": "Je bent nu aangemeld!",
     "registered-account": "Je account werd successvol aangemaakt!",
     "signed-out": "Je bent nu afgemeld!",
-    "password-mismatch": "De wachtwoord velden komen niet overeen!"
+    "password-mismatch": "De wachtwoord velden komen niet overeen!",
+    "password-reset-mail-sent": "Er werd een email verstuurd om je wachtwoord te veranderen!"
   }
 }

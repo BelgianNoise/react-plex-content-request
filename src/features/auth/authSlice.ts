@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { AuthWindowStatus } from '../../models/auth-window-status';
-import { login, logout, registerAccount, setIsLoggedIn } from './authThunks';
+import { login, logout, registerAccount, resetPassword, setIsLoggedIn } from './authThunks';
 
 export interface AuthState {
   isLoggedIn: boolean;
@@ -39,6 +39,9 @@ export const authSlice = createSlice({
     .addCase(logout.pending, (state) => { state.loading = true })
     .addCase(logout.fulfilled, (state) => { state.loading = false })
     .addCase(logout.rejected, (state) => { state.loading = false })
+    .addCase(resetPassword.pending, (state) => { state.loading = true })
+    .addCase(resetPassword.fulfilled, (state) => { state.loading = false })
+    .addCase(resetPassword.rejected, (state) => { state.loading = false })
     .addCase(setIsLoggedIn.fulfilled, (state, action: PayloadAction<boolean>) => {
       state.isLoggedIn = action.payload;
     });

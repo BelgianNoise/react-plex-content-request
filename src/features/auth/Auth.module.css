@@ -2,7 +2,7 @@
   width: 60%;
   min-width: 400px;
   max-width: 700px;
-  margin: 15% auto;
+  margin: 10% auto;
   overflow: scroll;
   background-color: var(--colors-background-normal);
   border-radius: var(--gap-tiny);

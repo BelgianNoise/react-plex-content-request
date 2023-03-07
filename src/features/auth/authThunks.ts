@@ -3,10 +3,11 @@ import {
   signInWithEmailAndPassword,
   signOut,
   createUserWithEmailAndPassword,
+  sendPasswordResetEmail,
 } from "firebase/auth";
 import { firebaseAuth } from "../../app/firebase";
 import { addNotification } from "../../app/notificationThunks";
-import { hideAuthWindow } from "./authSlice";
+import { goToSignIn, hideAuthWindow } from "./authSlice";
 
 export const registerAccount = createAsyncThunk('auth/register',
   async (args: {
@@ -42,6 +43,28 @@ export const login = createAsyncThunk('auth/login',
         message: 'notification.signed-in',
         id: new Date().getTime().toString(),
       }));
+    } catch (error: unknown) {
+      thunkapi.dispatch(addNotification({
+        type: 'error',
+        message: (error as any).message,
+        id: new Date().getTime().toString(),
+      }));
+    }
+  },
+);
+
+export const resetPassword = createAsyncThunk('auth/resetPassowrd',
+  async (args: {
+    email: string,
+  }, thunkapi) => {
+    try {
+      await sendPasswordResetEmail(firebaseAuth, args.email);
+      thunkapi.dispatch(addNotification({
+        type: 'success',
+        message: 'notification.password-reset-mail-sent',
+        id: new Date().getTime().toString(),
+      }));
+      thunkapi.dispatch(goToSignIn());
     } catch (error: unknown) {
       thunkapi.dispatch(addNotification({
         type: 'error',
