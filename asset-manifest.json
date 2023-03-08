@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.f97d5a84.css",
-    "main.js": "/static/js/main.60f78067.js",
+    "main.css": "/static/css/main.fde50e69.css",
+    "main.js": "/static/js/main.64725470.js",
     "static/js/787.e1fb1edd.chunk.js": "/static/js/787.e1fb1edd.chunk.js",
     "static/media/plex-logo-letters-white.png": "/static/media/plex-logo-letters-white.c8b199551b3023c303b5.png",
     "static/media/plex-arrow.png": "/static/media/plex-arrow.b32f17bc58f2d5406041.png",
@@ -20,12 +20,12 @@
     "static/media/plus.svg": "/static/media/plus.bf1516ee88986794fe527428dc950fa2.svg",
     "static/media/email.svg": "/static/media/email.941f22ef71bc33657269a234b2e5925b.svg",
     "static/media/check.svg": "/static/media/check.8fa5eb44e96b957b3e6faf27a94f030a.svg",
-    "main.f97d5a84.css.map": "/static/css/main.f97d5a84.css.map",
-    "main.60f78067.js.map": "/static/js/main.60f78067.js.map",
+    "main.fde50e69.css.map": "/static/css/main.fde50e69.css.map",
+    "main.64725470.js.map": "/static/js/main.64725470.js.map",
     "787.e1fb1edd.chunk.js.map": "/static/js/787.e1fb1edd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f97d5a84.css",
-    "static/js/main.60f78067.js"
+    "static/css/main.fde50e69.css",
+    "static/js/main.64725470.js"
   ]
 }
