@@ -25,6 +25,10 @@
     "not-logged-in": {
       "title": "It looks like you are not signed in yet!",
       "button-text": "Sign in to your account"
+    },
+    "overview": {
+      "filters": "Filters",
+      "show-more-requests": "Show more results ..."
     }
   },
 
@@ -64,12 +68,17 @@
       "my-requests-card-text": "View or delete your personal content requests.",
       "submit-request-card-text": "Can't find what you are looking for on Plex? Submit a new content request."
     },
-    "overview": {
-      "filters": "Filters",
-      "show-more-requests": "Show more results ..."
-    },
     "submit": {
       "not-logged-in-subtitle": "To submit a new content request you need to be signed in."
+    },
+    "general-overview": {
+      "empty-title": "TODO",
+      "empty-subtitle": "TODO"
+    },
+    "my-requests": {
+      "empty-title": "You haven't made any requests yet",
+      "empty-subtitle": "Head over to the 'Submit Request' page to make your first request!",
+      "not-logged-in-subtitle": "To get an overview fo your requests you need to be signed in."
     }
   },
 

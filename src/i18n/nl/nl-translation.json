@@ -25,6 +25,10 @@
     "not-logged-in": {
       "title": "Het lijkt erop dat je niet bent aangemeld!",
       "button-text": "Meld je nu aan"
+    },
+    "overview": {
+      "filters": "Filters",
+      "show-more-requests": "Toon meer resultaten ..."
     }
   },
 
@@ -64,12 +68,17 @@
       "my-requests-card-text": "Bekijk de status van of verwijder jouw aanvragen.",
       "submit-request-card-text": "Kan je niet vinden wat je zoekt op Plex? Dien dan hier een nieuwe aanvraag in."
     },
-    "overview": {
-      "filters": "Filters",
-      "show-more-requests": "Toon meer resultaten ..."
-    },
     "submit": {
       "not-logged-in-subtitle": "Om een nieuwe aanvraag in te dienen moet je aangemeld zijn."
+    },
+    "general-overview": {
+      "empty-title": "TODO",
+      "empty-subtitle": "TODO"
+    },
+    "my-requests": {
+      "empty-title": "Je hebt nog geen aanvraag gedaan",
+      "empty-subtitle": "Ga naar de 'Aanvraag Indienen' pagina om je eerste aanvraag te doen!",
+      "not-logged-in-subtitle": "Om je aanvragen te bekijken moet je aangemeld zijn."
     }
   },
 

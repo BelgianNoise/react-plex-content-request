@@ -1,19 +1,23 @@
 import { useState } from 'react';
-import { useAppSelector } from '../../app/hooks';
 import { Button } from '../../components/button/Button';
 import { RequestSmall } from '../../components/request-small/RequestSmall';
 import styles from './Overview.module.css';
 import { ReactComponent as CheckSVG } from '../../assets/check.svg';
 import { useTranslation } from 'react-i18next';
+import { Request } from '../../models/request.model';
 
-export function Overview() {
+export interface OverviewProps {
+  requests: Request[];
+}
+
+export function Overview(props: OverviewProps) {
   const [ showAmount, setShowAmount ] = useState(20);
   const [ showPending, setShowPending ] = useState(true);
   const [ showFulfilled, setShowFulfilled ] = useState(true);
   const [ showRejected, setShowRejected ] = useState(true);
   const [ showBusy, setShowBusy ] = useState(true);
 
-  const allRequests = useAppSelector((state) => state.data.requests.filter((r) => {
+  const allRequests = props.requests.filter((r) => {
     switch (r.status) {
       case 'fulfilled': return showFulfilled;
       case 'rejected': return showRejected;
@@ -21,7 +25,7 @@ export function Overview() {
       case 'busy': return showBusy;
       default: return false;
     }
-  }));
+  });
 
   const totalRequests = allRequests.length;
   const requests = allRequests.slice(0,showAmount);
@@ -36,7 +40,7 @@ export function Overview() {
     <div className={styles.root}>
 
       <div className={styles.filterContainer}>
-        <p>{t('features.overview.filters')}:</p>
+        <p>{t('components.overview.filters')}:</p>
 
         <Button
           icon={<CheckSVG />}
@@ -78,7 +82,7 @@ export function Overview() {
         <Button
           onClick={showMoreRequests}
           buttonStyle={'secondary'}
-          text={t('features.overview.show-more-requests')}
+          text={t('components.overview.show-more-requests')}
         />
       ) : undefined}
     

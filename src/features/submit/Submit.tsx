@@ -10,7 +10,14 @@ export function Submit() {
   return (
     <div className={styles.root}>
       {isLoggedIn ? (
-        <div></div>
+        <div>
+          NEXT UP:<br/>
+            - change RequestSmall to contain update and delete functionality
+            - implement submit request page <br/>
+            - change firestore rules <br/>
+            - put mention of new site on old site <br/>
+            - implement getImageSrc() <br/>
+        </div>
       ) : (
         <NotLoggedIn
           subtitle={t('features.submit.not-logged-in-subtitle')}

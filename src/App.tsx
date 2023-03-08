@@ -6,7 +6,7 @@ import { PageNotFound } from './components/page-not-found/PageNotFound';
 import { Submit } from './features/submit/Submit';
 import { Auth } from './features/auth/Auth';
 import { Home } from './features/home/Home';
-import { Overview } from './features/overview/Overview';
+import { GeneralOverview } from './features/general-overview/GeneralOverview';
 import { useAppDispatch, useAppSelector, useEffectOnce } from './app/hooks';
 import { hideAuthWindow } from './features/auth/authSlice';
 import { MouseEventHandler } from 'react';
@@ -78,7 +78,7 @@ function App() {
       
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/overview" element={<Overview />} />
+                <Route path="/overview" element={<GeneralOverview />} />
                 <Route path="/my-requests" element={<MyRequests />} />
                 <Route path="/submit-request" element={<Submit />} />
                 <Route path="*" element={<PageNotFound />} />
