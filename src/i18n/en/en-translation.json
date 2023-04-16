@@ -78,7 +78,8 @@
     "my-requests": {
       "empty-title": "You haven't made any requests yet",
       "empty-subtitle": "Head over to the 'Submit Request' page to make your first request!",
-      "not-logged-in-subtitle": "To get an overview fo your requests you need to be signed in."
+      "not-logged-in-subtitle": "To get an overview fo your requests you need to be signed in.",
+      "go-to-submit": "Submit new request"
     }
   },
 

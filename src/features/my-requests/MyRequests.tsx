@@ -5,6 +5,8 @@ import { useTranslation } from 'react-i18next';
 import styles from './MyRequests.module.css';
 import { ReactComponent as OverviewSVG } from '../../assets/overview.svg';
 import { NotLoggedIn } from '../../components/not-logged-in/NotLoggedIn';
+import { NavLink } from 'react-router-dom';
+import { Button } from '../../components/button/Button';
 
 export function MyRequests() {
 
@@ -22,6 +24,13 @@ export function MyRequests() {
               <OverviewSVG />
               <p className={styles.title}>{t('features.my-requests.empty-title')}</p>
               <p className={styles.subtitle}>{t('features.my-requests.empty-subtitle')}</p>
+              <NavLink to='/submit-request'>
+                <Button
+                  buttonStyle={'secondary'}
+                  text={t('features.my-requests.go-to-submit')}
+                  onClick={() => {}}
+                />
+              </NavLink>
             </div> // TODO add button to submit page
         : (
         <NotLoggedIn

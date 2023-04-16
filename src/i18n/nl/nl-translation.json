@@ -78,7 +78,8 @@
     "my-requests": {
       "empty-title": "Je hebt nog geen aanvraag gedaan",
       "empty-subtitle": "Ga naar de 'Aanvraag Indienen' pagina om je eerste aanvraag te doen!",
-      "not-logged-in-subtitle": "Om je aanvragen te bekijken moet je aangemeld zijn."
+      "not-logged-in-subtitle": "Om je aanvragen te bekijken moet je aangemeld zijn.",
+      "go-to-submit": "Nieuwe aanvraag indienen"
     }
   },
 
