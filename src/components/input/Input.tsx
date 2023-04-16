@@ -10,6 +10,7 @@ export interface TextInputProps {
   icon?: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
   autoComplete?: boolean;
   onEnter?: () => void;
+  placeHolder?: string;
 }
 
 export function TextInput(props: TextInputProps) {
@@ -31,6 +32,7 @@ export function TextInput(props: TextInputProps) {
           onChange={(e) => props.setValue(e.target.value)}
           autoComplete={props.autoComplete ? 'on' : 'off'}
           onKeyDown={onKeyDown}
+          placeholder={props.placeHolder}
         />
         {props.icon ? ( <props.icon /> ) : undefined}
         <div className={styles.background}></div>

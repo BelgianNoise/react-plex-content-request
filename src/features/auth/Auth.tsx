@@ -3,7 +3,7 @@ import styles from './Auth.module.css';
 import { ReactComponent as PlusSVG } from '../../assets/plus.svg';
 import { ReactComponent as InfoSVG } from '../../assets/info.svg';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
-import { goToForgotPassowrd, goToRegister, goToSignIn, hideAuthWindow } from './authSlice';
+import { goToRegister, goToSignIn, hideAuthWindow } from './authSlice';
 import { Login, LoginRef } from './components/login/Login';
 import { Register, RegisterRef } from './components/register/Register';
 import { ResetPassword, ResetPasswordRef } from './components/reset-password/ResetPassword';

@@ -1,4 +1,4 @@
-import { collection, query, onSnapshot, DocumentChange, DocumentData, QueryDocumentSnapshot, deleteDoc, doc } from "firebase/firestore";
+import { collection, query, onSnapshot, DocumentChange, DocumentData, QueryDocumentSnapshot, deleteDoc, doc, setDoc } from "firebase/firestore";
 import { addRequests, removeRequest, updateRequest } from "./dataSlice";
 import { firestoreDB } from "./firebase";
 import { useAppDispatch } from "./hooks";
@@ -48,7 +48,7 @@ export const transformToFirestoreObject = (
   }
 
   const reqFirestore: RequestFirestore = {
-    date: req.date.toString(),
+    date: new Date(req.date).toISOString(),
     content: req.text,
     requester: req.requester,
     status,
@@ -82,3 +82,8 @@ export const deleteRequestFromFirestore = async (request: Request) => {
   const docRef = doc(firestoreDB, 'requests', request.id);
   await deleteDoc(docRef);
 };
+
+export const addRequestToFirestore = async (request: Request) => {
+  const docRef = doc(firestoreDB, 'requests', request.id);
+  await setDoc(docRef, transformToFirestoreObject(request));
+}

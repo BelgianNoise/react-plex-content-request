@@ -69,7 +69,10 @@
       "submit-request-card-text": "Can't find what you are looking for on Plex? Submit a new content request."
     },
     "submit": {
-      "not-logged-in-subtitle": "To submit a new content request you need to be signed in."
+      "not-logged-in-subtitle": "To submit a new content request you need to be signed in.",
+      "content-name-label": "Serie of movie name:",
+      "imdb-link-label": "IMDB link: (optional but recommended)",
+      "submit-button": "Submit request"
     },
     "general-overview": {
       "empty-title": "TODO",
@@ -111,6 +114,8 @@
     "signed-out": "You are now signed out!",
     "password-mismatch": "Please make sure the entered passwords are equal!",
     "password-reset-mail-sent": "An email has been sent to reset your password!",
-    "deleted-request": "Request deleted successfully"
+    "deleted-request": "Request deleted successfully",
+    "submitted-request": "Request submitted successfully",
+    "submitted-request-imdb-link-invalid": "Imdb link is invalid"
   }
 }

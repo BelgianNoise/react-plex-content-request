@@ -1,0 +1,17 @@
+.root .container {
+  margin-top: var(--gap-large);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-normal);
+  padding: 0 var(--gap-huge);
+}
+
+.root .container > * {
+  width: 100%;
+}
+
+.root .container > *:last-child {
+  padding-top: var(--gap-small);
+}

@@ -69,7 +69,10 @@
       "submit-request-card-text": "Kan je niet vinden wat je zoekt op Plex? Dien dan hier een nieuwe aanvraag in."
     },
     "submit": {
-      "not-logged-in-subtitle": "Om een nieuwe aanvraag in te dienen moet je aangemeld zijn."
+      "not-logged-in-subtitle": "Om een nieuwe aanvraag in te dienen moet je aangemeld zijn.",
+      "content-name-label": "Naam van de serie of film:",
+      "imdb-link-label": "IMDB link: (optioneel maar aangeraden)",
+      "submit-button": "Aanvraag indienen"
     },
     "general-overview": {
       "empty-title": "TODO",
@@ -111,6 +114,9 @@
     "signed-out": "Je bent nu afgemeld!",
     "password-mismatch": "De wachtwoord velden komen niet overeen!",
     "password-reset-mail-sent": "Er werd een email verstuurd om je wachtwoord te veranderen!",
-    "deleted-request": "Aanvraag successvol verwijderd!"
+    "deleted-request": "Aanvraag successvol verwijderd!",
+    "submitted-request": "Aanvraag successvol ingediend!",
+    "submitted-request-imdb-link-invalid": "Imdb link is ongeldig"
+
   }
 }
