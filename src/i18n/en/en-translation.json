@@ -70,7 +70,7 @@
     },
     "submit": {
       "not-logged-in-subtitle": "To submit a new content request you need to be signed in.",
-      "content-name-label": "Serie of movie name:",
+      "content-name-label": "Serie or movie name:",
       "imdb-link-label": "IMDB link: (optional but recommended)",
       "submit-button": "Submit request"
     },
