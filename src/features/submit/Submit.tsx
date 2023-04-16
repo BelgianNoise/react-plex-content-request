@@ -12,11 +12,12 @@ export function Submit() {
       {isLoggedIn ? (
         <div>
           NEXT UP:<br/>
-            - change RequestSmall to contain update and delete functionality
+            - change RequestSmall to contain update functionality
             - implement submit request page <br/>
             - change firestore rules <br/>
             - put mention of new site on old site <br/>
-            - implement getImageSrc() <br/>
+            - Change getImageSrc() to use imdb API or similar <br/>
+            - Use imdb API or similar on submit-request page <br/>
         </div>
       ) : (
         <NotLoggedIn

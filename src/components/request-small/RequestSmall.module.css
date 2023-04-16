@@ -1,4 +1,5 @@
 .root {
+  position: relative;
   display: flex;
   flex-direction: row;
 
@@ -70,4 +71,22 @@
 }
 .rejected {
   background-color: red;
+}
+
+.actionsContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap-small);
+  padding: var(--gap-small);
+}
+
+.actionsContainer svg {
+  cursor: pointer;
+  width: var(--font-size-header-large);
+  height: var(--font-size-header-large);
+  fill: none;
+  stroke: var(--colors-foreground-darker);
 }

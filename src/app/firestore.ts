@@ -1,4 +1,4 @@
-import { collection, query, onSnapshot, DocumentChange, DocumentData, QueryDocumentSnapshot } from "firebase/firestore";
+import { collection, query, onSnapshot, DocumentChange, DocumentData, QueryDocumentSnapshot, deleteDoc, doc } from "firebase/firestore";
 import { addRequests, removeRequest, updateRequest } from "./dataSlice";
 import { firestoreDB } from "./firebase";
 import { useAppDispatch } from "./hooks";
@@ -35,7 +35,7 @@ export const tranformToObject = (
 
 export const transformToFirestoreObject = (
   req: Request,
-): void => {
+): unknown => {
   const sort: RequestFirestore['sort'] = req.sort === 'serie' ? 'Serie' : 'Film';
 
   let status: RequestFirestore['status'];
@@ -56,6 +56,8 @@ export const transformToFirestoreObject = (
     imdblink: req.imdbLink ?? '',
   };
 
+  return reqFirestore;
+
 };
 
 const q = query(collection(firestoreDB, 'requests'));
@@ -75,3 +77,8 @@ export const firestoreSubscribe = (dispatch: ReturnType<typeof useAppDispatch>) 
   });
 
 });
+
+export const deleteRequestFromFirestore = async (request: Request) => {
+  const docRef = doc(firestoreDB, 'requests', request.id);
+  await deleteDoc(docRef);
+};
