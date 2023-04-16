@@ -11,13 +11,7 @@ export function Submit() {
     <div className={styles.root}>
       {isLoggedIn ? (
         <div>
-          NEXT UP:<br/>
-            - change RequestSmall to contain update functionality
-            - implement submit request page <br/>
-            - change firestore rules <br/>
-            - put mention of new site on old site <br/>
-            - Change getImageSrc() to use imdb API or similar <br/>
-            - Use imdb API or similar on submit-request page <br/>
+          WIP
         </div>
       ) : (
         <NotLoggedIn
