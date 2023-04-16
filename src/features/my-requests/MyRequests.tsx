@@ -31,7 +31,7 @@ export function MyRequests() {
                   onClick={() => {}}
                 />
               </NavLink>
-            </div> // TODO add button to submit page
+            </div>
         : (
         <NotLoggedIn
           subtitle={t('features.my-requests.not-logged-in-subtitle')}

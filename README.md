@@ -10,7 +10,7 @@ A website where people can request new content to be added to my Plex media serv
   - [x] Global State Management (Redux)
   - [x] i18n (react-i18next)
   - [x] Authentication ( Firebase Auth )
-  - [ ] CR(U)D operations with authorization ( Firebase Firestore )
+  - [ ] CRUD operations with authorization ( Firebase Firestore )
 
 ## TODO
 
