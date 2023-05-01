@@ -14,7 +14,6 @@ A website where people can request new content to be added to my Plex media serv
 
 ## TODO
 
-  - change RequestSmall to contain update functionality
   - change firestore rules
   - put mention of new site on old site
   - Change `getImageSrc()` to use imdb API or similar

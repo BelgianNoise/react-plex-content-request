@@ -21,6 +21,7 @@ export function Auth() {
   const loginRef = useRef<LoginRef>(null);
   const registerRef = useRef<RegisterRef>(null);
   const resetPasswordRef = useRef<ResetPasswordRef>(null);
+
   const handleButtonPress = () => {
     loginRef.current?.submit();
     registerRef.current?.submit();

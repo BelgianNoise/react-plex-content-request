@@ -115,6 +115,7 @@
     "password-mismatch": "De wachtwoord velden komen niet overeen!",
     "password-reset-mail-sent": "Er werd een email verstuurd om je wachtwoord te veranderen!",
     "deleted-request": "Aanvraag successvol verwijderd!",
+    "updated-request": "Aanvraag successvol aangepast!",
     "submitted-request": "Aanvraag successvol ingediend!",
     "submitted-request-imdb-link-invalid": "Imdb link is ongeldig"
 

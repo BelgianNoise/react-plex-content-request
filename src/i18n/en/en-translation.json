@@ -115,6 +115,7 @@
     "password-mismatch": "Please make sure the entered passwords are equal!",
     "password-reset-mail-sent": "An email has been sent to reset your password!",
     "deleted-request": "Request deleted successfully",
+    "updated-request": "Request updated successfully",
     "submitted-request": "Request submitted successfully",
     "submitted-request-imdb-link-invalid": "Imdb link is invalid"
   }

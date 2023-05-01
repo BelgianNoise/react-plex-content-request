@@ -90,3 +90,26 @@
   fill: none;
   stroke: var(--colors-foreground-darker);
 }
+
+.actionsContainer:hover .popupContainer {
+  display: flex !important;
+}
+
+div.popupContainer {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  right: 100%;
+  display: none;
+  flex-direction: column;
+  gap: var(--gap-tiny);
+  background-color: var(--colors-background-dark);
+  padding: var(--gap-small);
+  border-radius: var(--gap-tiny);
+}
+
+div.popupContainer > span {
+  padding: 2px var(--gap-small);
+  border-radius: var(--gap-small);
+  cursor: pointer;
+}

@@ -87,3 +87,8 @@ export const addRequestToFirestore = async (request: Request) => {
   const docRef = doc(firestoreDB, 'requests', request.id);
   await setDoc(docRef, transformToFirestoreObject(request));
 }
+
+export const updateRequestInFirestore = async (request: Request) => {
+  const docRef = doc(firestoreDB, 'requests', request.id);
+  await setDoc(docRef, transformToFirestoreObject(request));
+}
