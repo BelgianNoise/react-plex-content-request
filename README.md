@@ -11,6 +11,7 @@ A website where people can request new content to be added to my Plex media serv
   - [x] i18n (react-i18next)
   - [x] Authentication ( Firebase Auth )
   - [x] CRUD operations with authorization ( Firebase Firestore )
+  - [ ] Use GCP product (preferably Cloud Functions)
 
 ## TODO
 
