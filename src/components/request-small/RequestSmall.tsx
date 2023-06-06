@@ -26,6 +26,16 @@ export function RequestSmall(props: RequestSmallProps) {
     dispatch(updateRequest({ request: { ...props.request, status } }));
   };
 
+  const parseEmail = (email: string) => {
+    const first = email.split('@')[0];
+    return first
+      .split('.')
+      .map((s) => s.replace(/[0-9]/gim, ''))
+      .filter((s) => s.length > 0)
+      .map((s) => `${s.charAt(0).toUpperCase()}${s.slice(1)}`)
+      .join(' ');
+  }
+
   return (
     <div className={styles.root}>
 
@@ -38,7 +48,7 @@ export function RequestSmall(props: RequestSmallProps) {
               {t(`common.${props.request.status}`)}
             </span>
           </div>
-        <p className={styles.footer}>{timeAgo} {t('components.request-small.by')} {props.request.requester}</p>
+        <p className={styles.footer}>{timeAgo} {t('components.request-small.by')} {parseEmail(props.request.requester)}</p>
       </div>
 
       {authenticatedUser === props.request.requester || isAdmin(authenticatedUser) ? (
