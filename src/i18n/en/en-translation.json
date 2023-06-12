@@ -72,7 +72,8 @@
       "not-logged-in-subtitle": "To submit a new content request you need to be signed in.",
       "content-name-label": "Serie or movie name:",
       "streaming-link-label": "Link to streaming platform or imdb: (optional but recommended)",
-      "submit-button": "Submit request"
+      "submit-button": "Submit request",
+      "where-stream": "Find out where it's available:"
     },
     "general-overview": {
       "empty-title": "TODO",

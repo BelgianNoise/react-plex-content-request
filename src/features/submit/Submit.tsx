@@ -63,15 +63,18 @@ export function Submit() {
             onEnter={() => submit()}
             placeHolder='The Office US'
           />
-          <TextInput
-            type='text'
-            value={streamingLink}
-            setValue={setStreamingLink}
-            label={t('features.submit.streaming-link-label')}
-            icon={InfoSVG}
-            onEnter={() => submit()}
-            placeHolder='https://vtm.be/vtmgo/de-kotmadam'
-          />
+          <div>
+            <TextInput
+              type='text'
+              value={streamingLink}
+              setValue={setStreamingLink}
+              label={t('features.submit.streaming-link-label')}
+              icon={InfoSVG}
+              onEnter={() => submit()}
+              placeHolder='https://vtm.be/vtmgo/de-kotmadam'
+            />
+            <span className={styles.subSpan}>{t('features.submit.where-stream')} <a href="https://waar-streamen.nasaj.be/" target="_blank" rel="noreferrer">https://waar-streamen.nasaj.be/</a></span>
+          </div>
           <Button
             text={t('features.submit.submit-button')}
             onClick={() => submit()}

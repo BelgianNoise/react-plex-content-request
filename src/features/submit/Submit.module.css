@@ -15,3 +15,12 @@
 .root .container > *:last-child {
   padding-top: var(--gap-small);
 }
+
+.subSpan {
+  margin: var(--gap-tiny) 0 0 var(--gap-normal);
+  color: var(--colors-foreground-dark);
+}
+.subSpan a {
+  color: var(--colors-plex-primary);
+  text-decoration: underline;
+}
