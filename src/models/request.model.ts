@@ -6,5 +6,5 @@ export interface Request {
   // sort will be deprecated in the future
   sort: 'serie' | 'movie';
   text: string;
-  imdbLink?: string;
+  streamingLink?: string;
 }

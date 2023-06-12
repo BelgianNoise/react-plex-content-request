@@ -71,7 +71,7 @@
     "submit": {
       "not-logged-in-subtitle": "Om een nieuwe aanvraag in te dienen moet je aangemeld zijn.",
       "content-name-label": "Naam van de serie of film:",
-      "imdb-link-label": "IMDB link: (optioneel maar aangeraden)",
+      "streaming-link-label": "Link naar streaming platform or imdb: (optioneel maar aangeraden)",
       "submit-button": "Aanvraag indienen"
     },
     "general-overview": {
@@ -117,7 +117,7 @@
     "deleted-request": "Aanvraag successvol verwijderd!",
     "updated-request": "Aanvraag successvol aangepast!",
     "submitted-request": "Aanvraag successvol ingediend!",
-    "submitted-request-imdb-link-invalid": "Imdb link is ongeldig"
+    "submitted-request-streaming-link-invalid": "Streaming link is geen geldige link!"
 
   }
 }

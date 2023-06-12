@@ -20,14 +20,15 @@ export function Submit() {
   const authenticatedUser = getAuth().currentUser?.email!;
 
   const [ contentName, setContantName ] = useState('');
-  const [ imdbLink, setImdbLink ] = useState('');
+  const [ streamingLink, setStreamingLink ] = useState('');
 
   const submit = () => {
-    if (imdbLink) {
-      if (!imdbLink.includes('imdb.com/')) {
+    if (streamingLink) {
+      try { new URL(streamingLink); }
+      catch {
         dispatch(addNotification({
           type: 'warning',
-          message: 'notification.submitted-request-imdb-link-invalid',
+          message: 'notification.submitted-request-streaming-link-invalid',
           id: new Date().getTime().toString(),
         }));
         return;
@@ -41,11 +42,11 @@ export function Submit() {
         status: 'pending',
         sort: 'serie',
         text: contentName,
-        imdbLink: imdbLink,
+        streamingLink: streamingLink,
       };
       dispatch(submitRequest({ request: newRequest }));
       setContantName('');
-      setImdbLink('');
+      setStreamingLink('');
     };
   };
 
@@ -64,12 +65,12 @@ export function Submit() {
           />
           <TextInput
             type='text'
-            value={imdbLink}
-            setValue={setImdbLink}
-            label={t('features.submit.imdb-link-label')}
+            value={streamingLink}
+            setValue={setStreamingLink}
+            label={t('features.submit.streaming-link-label')}
             icon={InfoSVG}
             onEnter={() => submit()}
-            placeHolder='https://www.imdb.com/title/tt0386676/'
+            placeHolder='https://vtm.be/vtmgo/de-kotmadam'
           />
           <Button
             text={t('features.submit.submit-button')}

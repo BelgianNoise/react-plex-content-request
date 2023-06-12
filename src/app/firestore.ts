@@ -27,7 +27,7 @@ export const tranformToObject = (
     requester: data.requester,
     status,
     sort,
-    imdbLink: data.imdblink,
+    streamingLink: data.streamingLink,
   };
 
   return newReq;
@@ -53,7 +53,7 @@ export const transformToFirestoreObject = (
     requester: req.requester,
     status,
     sort,
-    imdblink: req.imdbLink ?? '',
+    streamingLink: req.streamingLink ?? '',
   };
 
   return reqFirestore;

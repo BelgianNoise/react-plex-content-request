@@ -71,7 +71,7 @@
     "submit": {
       "not-logged-in-subtitle": "To submit a new content request you need to be signed in.",
       "content-name-label": "Serie or movie name:",
-      "imdb-link-label": "IMDB link: (optional but recommended)",
+      "streaming-link-label": "Link to streaming platform or imdb: (optional but recommended)",
       "submit-button": "Submit request"
     },
     "general-overview": {
@@ -117,6 +117,6 @@
     "deleted-request": "Request deleted successfully",
     "updated-request": "Request updated successfully",
     "submitted-request": "Request submitted successfully",
-    "submitted-request-imdb-link-invalid": "Imdb link is invalid"
+    "submitted-request-streaming-link-invalid": "Streaming link is not a valid URL!"
   }
 }
