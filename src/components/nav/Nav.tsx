@@ -6,6 +6,7 @@ import { ReactComponent as OverviewSVG } from '../../assets/overview.svg';
 import { ReactComponent as SubmitRequestSVG } from '../../assets/submit-request.svg';
 import { ReactComponent as MyRequestsSVG } from '../../assets/my-requests.svg';
 import plexArrow from '../../assets/plex-arrow.png';
+import github from '../../assets/github.png';
 import { useTranslation } from 'react-i18next';
 
 export function Nav() {
@@ -63,10 +64,19 @@ export function Nav() {
 
       </div>
 
-      <a href="https://app.plex.tv/" className={styles.goToPlex}>
-        <p>{t('components.nav.go-to-plex')}</p>
-        <img src={plexArrow} alt="plex-arrow"/>
-      </a>
+      <div className={styles.goToContainer}>
+
+        <a href="https://github.com/BelgianNoise/react-plex-content-request" target='_blank' rel="noreferrer" className={styles.goto}>
+          <p>{t('components.nav.go-to-github')}</p>
+          <img src={github} alt="github logo"/>
+        </a>
+
+        <a href="https://app.plex.tv/" className={styles.goto}>
+          <p>{t('components.nav.go-to-plex')}</p>
+          <img src={plexArrow} alt="plex-arrow"/>
+        </a>
+
+      </div>
 
     </div>
   );

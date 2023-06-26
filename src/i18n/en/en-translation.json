@@ -8,7 +8,8 @@
       "overview": "Overview",
       "my-requests": "My Requests",
       "submit-request": "Submit Request",
-      "go-to-plex": "Open Plex"
+      "go-to-plex": "Open Plex",
+      "go-to-github": "visit on Github"
     },
     "header": {
       "sign-in": "Sign in",
