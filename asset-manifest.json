@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.d844e428.css",
-    "main.js": "/static/js/main.f8c61f52.js",
+    "main.css": "/static/css/main.d4c38419.css",
+    "main.js": "/static/js/main.b439afb8.js",
     "static/js/787.e1fb1edd.chunk.js": "/static/js/787.e1fb1edd.chunk.js",
     "static/media/github.png": "/static/media/github.168e6be60fcf5d2acba4.png",
     "static/media/plex-logo-letters-white.png": "/static/media/plex-logo-letters-white.c8b199551b3023c303b5.png",
     "static/media/plex-arrow.png": "/static/media/plex-arrow.b32f17bc58f2d5406041.png",
     "static/media/submit-request.svg": "/static/media/submit-request.84a3abb08f9f81191118718af0918a3a.svg",
+    "static/media/link.svg": "/static/media/link.f9b9e276630c5cfd36f4507b582111b4.svg",
     "static/media/my-requests.svg": "/static/media/my-requests.74d5560db01d30afc80c7a22dfce5a53.svg",
     "static/media/auth-face.svg": "/static/media/auth-face.e5fe0cc6890f1678edc56d3ffb1a9312.svg",
     "static/media/warning.svg": "/static/media/warning.7bd7e187c60057af2e2cfd4295d72d8f.svg",
@@ -24,12 +25,12 @@
     "static/media/email.svg": "/static/media/email.941f22ef71bc33657269a234b2e5925b.svg",
     "static/media/caret.svg": "/static/media/caret.c377ab5e9943cdcb1a932d6a1b5b8a75.svg",
     "static/media/check.svg": "/static/media/check.8fa5eb44e96b957b3e6faf27a94f030a.svg",
-    "main.d844e428.css.map": "/static/css/main.d844e428.css.map",
-    "main.f8c61f52.js.map": "/static/js/main.f8c61f52.js.map",
+    "main.d4c38419.css.map": "/static/css/main.d4c38419.css.map",
+    "main.b439afb8.js.map": "/static/js/main.b439afb8.js.map",
     "787.e1fb1edd.chunk.js.map": "/static/js/787.e1fb1edd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d844e428.css",
-    "static/js/main.f8c61f52.js"
+    "static/css/main.d4c38419.css",
+    "static/js/main.b439afb8.js"
   ]
 }
