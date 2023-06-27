@@ -5,6 +5,7 @@ import { toTimeAgo } from '../../util/to-time-ago';
 import styles from './RequestSmall.module.css';
 import { ReactComponent as DeleteSVG } from '../../assets/delete.svg';
 import { ReactComponent as CaretSVG } from '../../assets/caret.svg';
+import { ReactComponent as LinkSVG } from '../../assets/link.svg';
 import { useAppDispatch } from '../../app/hooks';
 import { deleteRequest, updateRequest } from '../../app/dataThunks';
 import { getAuth } from 'firebase/auth';
@@ -41,7 +42,14 @@ export function RequestSmall(props: RequestSmallProps) {
 
       <img src={imagesrc} alt='poster' />
       <div className={styles.infoPane}>
-        <p className={styles.text}>{props.request.text}</p>
+        <div className={styles.infoPaneTitleContainer}>
+          <p className={styles.text}>{props.request.text}</p>
+          {props.request.streamingLink ? (
+            <LinkSVG
+              onClick={() => window.open(props.request.streamingLink, '_blank')}
+            />
+          ) : undefined}
+        </div>
         <div className={styles.statusContainer}>
           <span>{t('components.request-small.status')}: </span>
           <span className={styles[props.request.status]}>

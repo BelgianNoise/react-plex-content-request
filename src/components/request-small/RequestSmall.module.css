@@ -27,7 +27,25 @@
   overflow: hidden;
 }
 
-.infoPane > p {
+.infoPane .infoPaneTitleContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: var(--gap-small);
+}
+.infoPaneTitleContainer svg {
+  height: calc(var(--font-size-huge) - 3px);
+  fill: var(--colors-plex-primary);
+  cursor: pointer;
+  border-radius: var(--gap-tiny);
+  padding: 5px;
+}
+.infoPaneTitleContainer svg:hover {
+  background-color: var(--colors-background-light);
+}
+
+.infoPane p {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
